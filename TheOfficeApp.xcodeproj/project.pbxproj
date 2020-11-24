@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		BF0716B5256C298D00A2472F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0716B4256C298D00A2472F /* AppDelegate.swift */; };
 		BF0716B7256C298D00A2472F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0716B6256C298D00A2472F /* SceneDelegate.swift */; };
-		BF0716B9256C298D00A2472F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0716B8256C298D00A2472F /* ViewController.swift */; };
 		BF0716BC256C298D00A2472F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0716BA256C298D00A2472F /* Main.storyboard */; };
 		BF0716BE256C298E00A2472F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0716BD256C298E00A2472F /* Assets.xcassets */; };
 		BF0716C1256C298E00A2472F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0716BF256C298E00A2472F /* LaunchScreen.storyboard */; };
 		BF0716CC256C298E00A2472F /* TheOfficeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0716CB256C298E00A2472F /* TheOfficeAppTests.swift */; };
 		BF0716D7256C298E00A2472F /* TheOfficeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0716D6256C298E00A2472F /* TheOfficeAppUITests.swift */; };
+		BF0716F3256C34C200A2472F /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0716F2256C34C200A2472F /* WebService.swift */; };
+		BF0716F9256C37F700A2472F /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0716F8256C37F700A2472F /* Episode.swift */; };
+		BF071709256C3B1D00A2472F /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF071708256C3B1D00A2472F /* Endpoints.swift */; };
+		BF07171C256C7F2700A2472F /* EpisodesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07171B256C7F2700A2472F /* EpisodesListTableViewController.swift */; };
+		BF071722256C800800A2472F /* EpisodeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF071721256C800800A2472F /* EpisodeListViewModel.swift */; };
+		BF071730256C934C00A2472F /* EpisodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07172F256C934C00A2472F /* EpisodeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +43,6 @@
 		BF0716B1256C298D00A2472F /* TheOfficeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheOfficeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0716B4256C298D00A2472F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF0716B6256C298D00A2472F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BF0716B8256C298D00A2472F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BF0716BB256C298D00A2472F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF0716BD256C298E00A2472F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF0716C0256C298E00A2472F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,12 @@
 		BF0716D2256C298E00A2472F /* TheOfficeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheOfficeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0716D6256C298E00A2472F /* TheOfficeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheOfficeAppUITests.swift; sourceTree = "<group>"; };
 		BF0716D8256C298E00A2472F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF0716F2256C34C200A2472F /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		BF0716F8256C37F700A2472F /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		BF071708256C3B1D00A2472F /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		BF07171B256C7F2700A2472F /* EpisodesListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesListTableViewController.swift; sourceTree = "<group>"; };
+		BF071721256C800800A2472F /* EpisodeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListViewModel.swift; sourceTree = "<group>"; };
+		BF07172F256C934C00A2472F /* EpisodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +109,13 @@
 		BF0716B3256C298D00A2472F /* TheOfficeApp */ = {
 			isa = PBXGroup;
 			children = (
+				BF07170D256C7EA500A2472F /* Scenes */,
+				BF0716F7256C371C00A2472F /* Models */,
+				BF0716F1256C347800A2472F /* Networking */,
+				BF0716E7256C2D7F00A2472F /* Assets */,
 				BF0716B4256C298D00A2472F /* AppDelegate.swift */,
 				BF0716B6256C298D00A2472F /* SceneDelegate.swift */,
-				BF0716B8256C298D00A2472F /* ViewController.swift */,
 				BF0716BA256C298D00A2472F /* Main.storyboard */,
-				BF0716BD256C298E00A2472F /* Assets.xcassets */,
-				BF0716BF256C298E00A2472F /* LaunchScreen.storyboard */,
 				BF0716C2256C298E00A2472F /* Info.plist */,
 			);
 			path = TheOfficeApp;
@@ -126,6 +137,66 @@
 				BF0716D8256C298E00A2472F /* Info.plist */,
 			);
 			path = TheOfficeAppUITests;
+			sourceTree = "<group>";
+		};
+		BF0716E7256C2D7F00A2472F /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BF0716BF256C298E00A2472F /* LaunchScreen.storyboard */,
+				BF0716BD256C298E00A2472F /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		BF0716F1256C347800A2472F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BF0716F2256C34C200A2472F /* WebService.swift */,
+				BF071708256C3B1D00A2472F /* Endpoints.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BF0716F7256C371C00A2472F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BF0716F8256C37F700A2472F /* Episode.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BF07170D256C7EA500A2472F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BF07170E256C7EAC00A2472F /* EpisodesList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BF07170E256C7EAC00A2472F /* EpisodesList */ = {
+			isa = PBXGroup;
+			children = (
+				BF071720256C7FD000A2472F /* ViewModel */,
+				BF071717256C7EF200A2472F /* View */,
+			);
+			path = EpisodesList;
+			sourceTree = "<group>";
+		};
+		BF071717256C7EF200A2472F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF07171B256C7F2700A2472F /* EpisodesListTableViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF071720256C7FD000A2472F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BF071721256C800800A2472F /* EpisodeListViewModel.swift */,
+				BF07172F256C934C00A2472F /* EpisodeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +329,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF0716B9256C298D00A2472F /* ViewController.swift in Sources */,
+				BF07171C256C7F2700A2472F /* EpisodesListTableViewController.swift in Sources */,
 				BF0716B5256C298D00A2472F /* AppDelegate.swift in Sources */,
+				BF0716F3256C34C200A2472F /* WebService.swift in Sources */,
+				BF0716F9256C37F700A2472F /* Episode.swift in Sources */,
+				BF071709256C3B1D00A2472F /* Endpoints.swift in Sources */,
+				BF071722256C800800A2472F /* EpisodeListViewModel.swift in Sources */,
+				BF071730256C934C00A2472F /* EpisodeViewModel.swift in Sources */,
 				BF0716B7256C298D00A2472F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
