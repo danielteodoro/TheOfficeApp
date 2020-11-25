@@ -20,17 +20,11 @@ class EpisodeViewModel {
     }
     
     var airDate: String {
-        let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-
-        let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "MMM dd,yyyy"
-
-        if let date = dateFormatterGet.date(from: self.episode.airDate) {
-            return dateFormatterPrint.string(from: date)
-        } else {
-            return("Unknow Date")
-        }
+        return DateFormatterHelper().formatDate(from: self.episode.airDate)
+    }
+    
+    var director: String {
+        return self.episode.director.name
     }
     
     

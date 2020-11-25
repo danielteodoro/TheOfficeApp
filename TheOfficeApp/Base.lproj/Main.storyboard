@@ -16,13 +16,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="Pdg-2Q-zyN">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EpisodeTableViewCell" rowHeight="120" id="Pdg-2Q-zyN" customClass="EpisodeTableViewCell" customModule="TheOfficeApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pdg-2Q-zyN" id="3SE-ag-446">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Episode Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="O9n-jJ-vlm">
+                                            <rect key="frame" x="16" y="16" width="382" height="33.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a48-Pi-WOW">
+                                            <rect key="frame" x="16" y="73.5" width="61.5" height="30.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhK-g2-zm4">
+                                            <rect key="frame" x="297" y="83.5" width="101" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="mhK-g2-zm4" secondAttribute="bottom" constant="16" id="25q-oL-ZK9"/>
+                                        <constraint firstAttribute="trailing" secondItem="O9n-jJ-vlm" secondAttribute="trailing" constant="16" id="8cb-Vn-q5v"/>
+                                        <constraint firstAttribute="trailing" secondItem="mhK-g2-zm4" secondAttribute="trailing" constant="16" id="Aax-si-XWD"/>
+                                        <constraint firstItem="O9n-jJ-vlm" firstAttribute="top" secondItem="3SE-ag-446" secondAttribute="top" constant="16" id="XOu-vi-5NQ"/>
+                                        <constraint firstItem="O9n-jJ-vlm" firstAttribute="leading" secondItem="3SE-ag-446" secondAttribute="leading" constant="16" id="crR-ca-ZKW"/>
+                                        <constraint firstAttribute="bottom" secondItem="a48-Pi-WOW" secondAttribute="bottom" constant="16" id="kEf-Ra-6CF"/>
+                                        <constraint firstItem="a48-Pi-WOW" firstAttribute="leading" secondItem="3SE-ag-446" secondAttribute="leading" constant="16" id="vf0-v3-hEC"/>
+                                        <constraint firstItem="a48-Pi-WOW" firstAttribute="top" secondItem="O9n-jJ-vlm" secondAttribute="bottom" constant="24" id="y77-q3-OkP"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="mhK-g2-zm4" id="m6B-BC-sp9"/>
+                                    <outlet property="directorLabel" destination="a48-Pi-WOW" id="Dep-6F-Yrr"/>
+                                    <outlet property="titleLabel" destination="O9n-jJ-vlm" id="lUj-5d-10T"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

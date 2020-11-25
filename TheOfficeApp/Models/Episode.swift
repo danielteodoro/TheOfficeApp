@@ -16,4 +16,5 @@ struct Episode: Decodable {
     let title: String
     let description: String
     let airDate: String
+    let director: CrewMember
 }

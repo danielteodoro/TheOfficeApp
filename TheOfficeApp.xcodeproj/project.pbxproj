@@ -20,6 +20,9 @@
 		BF07171C256C7F2700A2472F /* EpisodesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07171B256C7F2700A2472F /* EpisodesListTableViewController.swift */; };
 		BF071722256C800800A2472F /* EpisodeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF071721256C800800A2472F /* EpisodeListViewModel.swift */; };
 		BF071730256C934C00A2472F /* EpisodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07172F256C934C00A2472F /* EpisodeViewModel.swift */; };
+		BF071736256D766500A2472F /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF071735256D766500A2472F /* EpisodeTableViewCell.swift */; };
+		BF07173B256D7EEE00A2472F /* CrewMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07173A256D7EEE00A2472F /* CrewMember.swift */; };
+		BF071741256DEE6100A2472F /* DateFormatterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF071740256DEE6100A2472F /* DateFormatterHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		BF07171B256C7F2700A2472F /* EpisodesListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesListTableViewController.swift; sourceTree = "<group>"; };
 		BF071721256C800800A2472F /* EpisodeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListViewModel.swift; sourceTree = "<group>"; };
 		BF07172F256C934C00A2472F /* EpisodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewModel.swift; sourceTree = "<group>"; };
+		BF071735256D766500A2472F /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
+		BF07173A256D7EEE00A2472F /* CrewMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewMember.swift; sourceTree = "<group>"; };
+		BF071740256DEE6100A2472F /* DateFormatterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,7 @@
 		BF0716B3256C298D00A2472F /* TheOfficeApp */ = {
 			isa = PBXGroup;
 			children = (
+				BF07173F256DEE4400A2472F /* Helpers */,
 				BF07170D256C7EA500A2472F /* Scenes */,
 				BF0716F7256C371C00A2472F /* Models */,
 				BF0716F1256C347800A2472F /* Networking */,
@@ -161,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				BF0716F8256C37F700A2472F /* Episode.swift */,
+				BF07173A256D7EEE00A2472F /* CrewMember.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -185,6 +193,7 @@
 		BF071717256C7EF200A2472F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BF071734256D763300A2472F /* Cell */,
 				BF07171B256C7F2700A2472F /* EpisodesListTableViewController.swift */,
 			);
 			path = View;
@@ -197,6 +206,22 @@
 				BF07172F256C934C00A2472F /* EpisodeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BF071734256D763300A2472F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BF071735256D766500A2472F /* EpisodeTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BF07173F256DEE4400A2472F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BF071740256DEE6100A2472F /* DateFormatterHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,11 +354,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF071736256D766500A2472F /* EpisodeTableViewCell.swift in Sources */,
 				BF07171C256C7F2700A2472F /* EpisodesListTableViewController.swift in Sources */,
 				BF0716B5256C298D00A2472F /* AppDelegate.swift in Sources */,
 				BF0716F3256C34C200A2472F /* WebService.swift in Sources */,
+				BF07173B256D7EEE00A2472F /* CrewMember.swift in Sources */,
 				BF0716F9256C37F700A2472F /* Episode.swift in Sources */,
 				BF071709256C3B1D00A2472F /* Endpoints.swift in Sources */,
+				BF071741256DEE6100A2472F /* DateFormatterHelper.swift in Sources */,
 				BF071722256C800800A2472F /* EpisodeListViewModel.swift in Sources */,
 				BF071730256C934C00A2472F /* EpisodeViewModel.swift in Sources */,
 				BF0716B7256C298D00A2472F /* SceneDelegate.swift in Sources */,
