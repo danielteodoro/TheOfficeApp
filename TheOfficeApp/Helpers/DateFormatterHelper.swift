@@ -14,7 +14,7 @@ class DateFormatterHelper {
         dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 
         let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "MMM dd,yyyy"
+        dateFormatterPrint.dateFormat = "MMM dd, yyyy"
 
         if let date = dateFormatterGet.date(from: rawDateString) {
             return dateFormatterPrint.string(from: date)

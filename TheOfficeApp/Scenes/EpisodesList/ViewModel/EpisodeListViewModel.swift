@@ -14,15 +14,18 @@ protocol EpisodeListViewModelDelegate {
 
 class EpisodeListViewModel {
     
+    var service: WebServicing
+    
     var episodesVM = [EpisodeViewModel]()
     var delegate: EpisodeListViewModelDelegate?
     
-    init() {
+    init(service: WebServicing = WebService()) {
+        self.service = service
        loadEpisodes()
     }
     
     func loadEpisodes() {
-        WebService().fetchEpisodes() { [weak self] result in
+        service.fetchEpisodes() { [weak self] result in
             switch result {
             case .success(let episodes):
                 self?.episodesVM = episodes.map(EpisodeViewModel.init)

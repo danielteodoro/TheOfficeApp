@@ -7,7 +7,11 @@
 
 import Foundation
 
-class WebService {
+protocol WebServicing {
+    func fetchEpisodes(completion:  @escaping (Result<[Episode], Error>) -> Void)
+}
+
+class WebService: WebServicing {
     func fetchEpisodes(completion:  @escaping (Result<[Episode], Error>) -> Void){
         var request = URLRequest(url:Endpoints().episodes())
         request.httpMethod = "GET"
