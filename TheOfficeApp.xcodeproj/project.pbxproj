@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BF0716B5256C298D00A2472F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0716B4256C298D00A2472F /* AppDelegate.swift */; };
 		BF0716B7256C298D00A2472F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0716B6256C298D00A2472F /* SceneDelegate.swift */; };
-		BF0716BC256C298D00A2472F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0716BA256C298D00A2472F /* Main.storyboard */; };
 		BF0716BE256C298E00A2472F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0716BD256C298E00A2472F /* Assets.xcassets */; };
 		BF0716C1256C298E00A2472F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0716BF256C298E00A2472F /* LaunchScreen.storyboard */; };
 		BF0716CC256C298E00A2472F /* TheOfficeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0716CB256C298E00A2472F /* TheOfficeAppTests.swift */; };
@@ -17,14 +16,26 @@
 		BF0716F3256C34C200A2472F /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0716F2256C34C200A2472F /* WebService.swift */; };
 		BF0716F9256C37F700A2472F /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0716F8256C37F700A2472F /* Episode.swift */; };
 		BF071709256C3B1D00A2472F /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF071708256C3B1D00A2472F /* Endpoints.swift */; };
-		BF07171C256C7F2700A2472F /* EpisodesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07171B256C7F2700A2472F /* EpisodesListTableViewController.swift */; };
 		BF071722256C800800A2472F /* EpisodeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF071721256C800800A2472F /* EpisodeListViewModel.swift */; };
 		BF071730256C934C00A2472F /* EpisodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07172F256C934C00A2472F /* EpisodeViewModel.swift */; };
-		BF071736256D766500A2472F /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF071735256D766500A2472F /* EpisodeTableViewCell.swift */; };
 		BF07173B256D7EEE00A2472F /* CrewMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF07173A256D7EEE00A2472F /* CrewMember.swift */; };
 		BF071741256DEE6100A2472F /* DateFormatterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF071740256DEE6100A2472F /* DateFormatterHelper.swift */; };
 		BF071749256DF82200A2472F /* EpisodeListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF071748256DF82200A2472F /* EpisodeListViewModelTests.swift */; };
 		BF071751256E028B00A2472F /* EpisodeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF071750256E028B00A2472F /* EpisodeViewModelTests.swift */; };
+		BF26A593257FC06400F23B02 /* Showable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A591257FC06400F23B02 /* Showable.swift */; };
+		BF26A594257FC06400F23B02 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A592257FC06400F23B02 /* Router.swift */; };
+		BF26A59D257FC08800F23B02 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A59C257FC08800F23B02 /* Coordinator.swift */; };
+		BF26A5A4257FC45D00F23B02 /* EpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A5A2257FC45D00F23B02 /* EpisodeDetailViewController.swift */; };
+		BF26A5A5257FC45D00F23B02 /* EpisodeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF26A5A3257FC45D00F23B02 /* EpisodeDetailViewController.xib */; };
+		BF26A5AD257FC50C00F23B02 /* OfficeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A5AC257FC50C00F23B02 /* OfficeRouter.swift */; };
+		BF26A5BC257FC86B00F23B02 /* EpisodeListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A5BB257FC86B00F23B02 /* EpisodeListCoordinator.swift */; };
+		BF26A5D7257FDC4800F23B02 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A5D5257FDC4800F23B02 /* EpisodeTableViewCell.swift */; };
+		BF26A5D8257FDC4800F23B02 /* EpisodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF26A5D6257FDC4800F23B02 /* EpisodeTableViewCell.xib */; };
+		BF47F5B325704C87000FC71A /* DateFormatterHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF47F5B225704C87000FC71A /* DateFormatterHelperTests.swift */; };
+		BFCF965525856CAD00116F77 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCF965425856CAD00116F77 /* ApplicationCoordinator.swift */; };
+		BFCF96842585882700116F77 /* EpisodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCF96822585882700116F77 /* EpisodeListViewController.swift */; };
+		BFCF96852585882700116F77 /* EpisodeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFCF96832585882700116F77 /* EpisodeListViewController.xib */; };
+		BFCF968A2586CCAF00116F77 /* EpisodeDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCF96892586CCAF00116F77 /* EpisodeDetailCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +59,6 @@
 		BF0716B1256C298D00A2472F /* TheOfficeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheOfficeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0716B4256C298D00A2472F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF0716B6256C298D00A2472F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BF0716BB256C298D00A2472F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF0716BD256C298E00A2472F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF0716C0256C298E00A2472F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF0716C2256C298E00A2472F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,14 +71,26 @@
 		BF0716F2256C34C200A2472F /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		BF0716F8256C37F700A2472F /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		BF071708256C3B1D00A2472F /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
-		BF07171B256C7F2700A2472F /* EpisodesListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesListTableViewController.swift; sourceTree = "<group>"; };
 		BF071721256C800800A2472F /* EpisodeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListViewModel.swift; sourceTree = "<group>"; };
 		BF07172F256C934C00A2472F /* EpisodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewModel.swift; sourceTree = "<group>"; };
-		BF071735256D766500A2472F /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		BF07173A256D7EEE00A2472F /* CrewMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewMember.swift; sourceTree = "<group>"; };
 		BF071740256DEE6100A2472F /* DateFormatterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterHelper.swift; sourceTree = "<group>"; };
 		BF071748256DF82200A2472F /* EpisodeListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListViewModelTests.swift; sourceTree = "<group>"; };
 		BF071750256E028B00A2472F /* EpisodeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewModelTests.swift; sourceTree = "<group>"; };
+		BF26A591257FC06400F23B02 /* Showable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Showable.swift; sourceTree = "<group>"; };
+		BF26A592257FC06400F23B02 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		BF26A59C257FC08800F23B02 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		BF26A5A2257FC45D00F23B02 /* EpisodeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewController.swift; sourceTree = "<group>"; };
+		BF26A5A3257FC45D00F23B02 /* EpisodeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeDetailViewController.xib; sourceTree = "<group>"; };
+		BF26A5AC257FC50C00F23B02 /* OfficeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeRouter.swift; sourceTree = "<group>"; };
+		BF26A5BB257FC86B00F23B02 /* EpisodeListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListCoordinator.swift; sourceTree = "<group>"; };
+		BF26A5D5257FDC4800F23B02 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
+		BF26A5D6257FDC4800F23B02 /* EpisodeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeTableViewCell.xib; sourceTree = "<group>"; };
+		BF47F5B225704C87000FC71A /* DateFormatterHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterHelperTests.swift; sourceTree = "<group>"; };
+		BFCF965425856CAD00116F77 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		BFCF96822585882700116F77 /* EpisodeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListViewController.swift; sourceTree = "<group>"; };
+		BFCF96832585882700116F77 /* EpisodeListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeListViewController.xib; sourceTree = "<group>"; };
+		BFCF96892586CCAF00116F77 /* EpisodeDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +141,8 @@
 		BF0716B3256C298D00A2472F /* TheOfficeApp */ = {
 			isa = PBXGroup;
 			children = (
+				BF26A59B257FC07C00F23B02 /* Coordinators */,
+				BF26A590257FC03A00F23B02 /* Router */,
 				BF07173F256DEE4400A2472F /* Helpers */,
 				BF07170D256C7EA500A2472F /* Scenes */,
 				BF0716F7256C371C00A2472F /* Models */,
@@ -126,7 +150,6 @@
 				BF0716E7256C2D7F00A2472F /* Assets */,
 				BF0716B4256C298D00A2472F /* AppDelegate.swift */,
 				BF0716B6256C298D00A2472F /* SceneDelegate.swift */,
-				BF0716BA256C298D00A2472F /* Main.storyboard */,
 				BF0716C2256C298E00A2472F /* Info.plist */,
 			);
 			path = TheOfficeApp;
@@ -135,6 +158,7 @@
 		BF0716CA256C298E00A2472F /* TheOfficeAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				BF47F5B125704C76000FC71A /* Helpers */,
 				BF071745256DF6AE00A2472F /* Scenes */,
 				BF0716CB256C298E00A2472F /* TheOfficeAppTests.swift */,
 				BF0716CD256C298E00A2472F /* Info.plist */,
@@ -181,6 +205,7 @@
 		BF07170D256C7EA500A2472F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BF26A5A1257FC42900F23B02 /* EpisodeDetail */,
 				BF07170E256C7EAC00A2472F /* EpisodesList */,
 			);
 			path = Scenes;
@@ -199,7 +224,8 @@
 			isa = PBXGroup;
 			children = (
 				BF071734256D763300A2472F /* Cell */,
-				BF07171B256C7F2700A2472F /* EpisodesListTableViewController.swift */,
+				BFCF96822585882700116F77 /* EpisodeListViewController.swift */,
+				BFCF96832585882700116F77 /* EpisodeListViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -216,7 +242,8 @@
 		BF071734256D763300A2472F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				BF071735256D766500A2472F /* EpisodeTableViewCell.swift */,
+				BF26A5D5257FDC4800F23B02 /* EpisodeTableViewCell.swift */,
+				BF26A5D6257FDC4800F23B02 /* EpisodeTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -252,6 +279,44 @@
 				BF071750256E028B00A2472F /* EpisodeViewModelTests.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BF26A590257FC03A00F23B02 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BF26A591257FC06400F23B02 /* Showable.swift */,
+				BF26A592257FC06400F23B02 /* Router.swift */,
+				BF26A5AC257FC50C00F23B02 /* OfficeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BF26A59B257FC07C00F23B02 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				BF26A59C257FC08800F23B02 /* Coordinator.swift */,
+				BFCF965425856CAD00116F77 /* ApplicationCoordinator.swift */,
+				BF26A5BB257FC86B00F23B02 /* EpisodeListCoordinator.swift */,
+				BFCF96892586CCAF00116F77 /* EpisodeDetailCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		BF26A5A1257FC42900F23B02 /* EpisodeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BF26A5A2257FC45D00F23B02 /* EpisodeDetailViewController.swift */,
+				BF26A5A3257FC45D00F23B02 /* EpisodeDetailViewController.xib */,
+			);
+			path = EpisodeDetail;
+			sourceTree = "<group>";
+		};
+		BF47F5B125704C76000FC71A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BF47F5B225704C87000FC71A /* DateFormatterHelperTests.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,8 +423,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF0716C1256C298E00A2472F /* LaunchScreen.storyboard in Resources */,
+				BF26A5D8257FDC4800F23B02 /* EpisodeTableViewCell.xib in Resources */,
+				BFCF96852585882700116F77 /* EpisodeListViewController.xib in Resources */,
 				BF0716BE256C298E00A2472F /* Assets.xcassets in Resources */,
-				BF0716BC256C298D00A2472F /* Main.storyboard in Resources */,
+				BF26A5A5257FC45D00F23B02 /* EpisodeDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,17 +451,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF071736256D766500A2472F /* EpisodeTableViewCell.swift in Sources */,
-				BF07171C256C7F2700A2472F /* EpisodesListTableViewController.swift in Sources */,
 				BF0716B5256C298D00A2472F /* AppDelegate.swift in Sources */,
 				BF0716F3256C34C200A2472F /* WebService.swift in Sources */,
 				BF07173B256D7EEE00A2472F /* CrewMember.swift in Sources */,
 				BF0716F9256C37F700A2472F /* Episode.swift in Sources */,
+				BFCF968A2586CCAF00116F77 /* EpisodeDetailCoordinator.swift in Sources */,
+				BFCF965525856CAD00116F77 /* ApplicationCoordinator.swift in Sources */,
+				BF26A59D257FC08800F23B02 /* Coordinator.swift in Sources */,
+				BFCF96842585882700116F77 /* EpisodeListViewController.swift in Sources */,
 				BF071709256C3B1D00A2472F /* Endpoints.swift in Sources */,
 				BF071741256DEE6100A2472F /* DateFormatterHelper.swift in Sources */,
 				BF071722256C800800A2472F /* EpisodeListViewModel.swift in Sources */,
+				BF26A5AD257FC50C00F23B02 /* OfficeRouter.swift in Sources */,
+				BF26A5D7257FDC4800F23B02 /* EpisodeTableViewCell.swift in Sources */,
+				BF26A5A4257FC45D00F23B02 /* EpisodeDetailViewController.swift in Sources */,
 				BF071730256C934C00A2472F /* EpisodeViewModel.swift in Sources */,
+				BF26A5BC257FC86B00F23B02 /* EpisodeListCoordinator.swift in Sources */,
+				BF26A593257FC06400F23B02 /* Showable.swift in Sources */,
 				BF0716B7256C298D00A2472F /* SceneDelegate.swift in Sources */,
+				BF26A594257FC06400F23B02 /* Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +479,7 @@
 			files = (
 				BF071749256DF82200A2472F /* EpisodeListViewModelTests.swift in Sources */,
 				BF071751256E028B00A2472F /* EpisodeViewModelTests.swift in Sources */,
+				BF47F5B325704C87000FC71A /* DateFormatterHelperTests.swift in Sources */,
 				BF0716CC256C298E00A2472F /* TheOfficeAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,14 +508,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BF0716BA256C298D00A2472F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF0716BB256C298D00A2472F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BF0716BF256C298E00A2472F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
