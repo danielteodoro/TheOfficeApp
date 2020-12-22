@@ -23,13 +23,23 @@ class EpisodeViewModel {
         return DateFormatterHelper().formatDate(from: self.episode.airDate)
     }
     
-    var director: String {
+    var directorName: String {
         return self.episode.director.name
     }
     
+    var writerName: String {
+        return self.episode.writer.name
+    }
+    
+    func getDirector() -> CrewMember {
+        return episode.director
+    }
+    
+    func getWriter() -> CrewMember {
+        return episode.writer
+    }
     
     init(episode: Episode) {
         self.episode = episode
     }
-    
 }

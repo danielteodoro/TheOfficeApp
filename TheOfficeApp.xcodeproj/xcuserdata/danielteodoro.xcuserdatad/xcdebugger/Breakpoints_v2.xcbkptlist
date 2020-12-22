@@ -135,16 +135,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "411729A1-10CA-4E3D-9A37-C4FB721414D4"
+            uuid = "2D529571-8E17-442C-91A5-61319100B276"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TheOfficeApp/Scenes/EpisodesList/View/Cell/EpisodeTableViewCell.swift"
+            filePath = "TheOfficeApp/Networking/WebService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "awakeFromNib()"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "fetchEpisodes(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

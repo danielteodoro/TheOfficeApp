@@ -52,8 +52,9 @@ class EpisodeListViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("selecionado")
         self.delegate?.didSelectEpisode(episodeVM: vm.episodesVM[indexPath.row])
+        
+        self.episodeListTableView.deselectRow(at: indexPath, animated: false)
     }
     
 }

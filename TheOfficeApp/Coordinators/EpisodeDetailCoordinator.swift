@@ -19,12 +19,18 @@ class EpisodeDetailCoordinator: Coordinator {
     }
     
     func start() {
-        let episodeDetailViewController = EpisodeDetailViewController(nibName: "EpisodeDetailViewController", bundle: nil)
-        episodeDetailViewController.title = episodeVM.title
+        let episodeDetailViewController = EpisodeDetailViewController.init(viewModel: episodeVM)
+        episodeDetailViewController.delegate = self
         presenter.push(episodeDetailViewController, animated: true, completion:nil)
         
         self.episodeDetailViewController = episodeDetailViewController
     }
-    
+}
 
+extension EpisodeDetailCoordinator: EpisodeDetailViewControllerDelegate {
+    
+    func openCrewMemberInfo(_ crewMember: CrewMember, title: String) {
+        let crewMemberInfoCoordinator = CrewMemberInfoCoordinator(presenter: self.presenter, crewMember: crewMember, title: title)
+        crewMemberInfoCoordinator.start()
+    }
 }

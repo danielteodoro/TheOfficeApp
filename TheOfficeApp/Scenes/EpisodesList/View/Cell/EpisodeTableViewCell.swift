@@ -25,9 +25,8 @@ class EpisodeTableViewCell: UITableViewCell {
     }
     
     func presentData(episodeVM: EpisodeViewModel) {
-//        self.textLabel?.text = episodeVM.title
         self.titleLabel.text = episodeVM.title
-        self.directorLabel.text = episodeVM.director
+        self.directorLabel.text = episodeVM.directorName
         self.dateLabel.text = episodeVM.airDate
     }
 

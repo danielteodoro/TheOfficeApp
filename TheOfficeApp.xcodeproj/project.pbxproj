@@ -22,6 +22,10 @@
 		BF071741256DEE6100A2472F /* DateFormatterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF071740256DEE6100A2472F /* DateFormatterHelper.swift */; };
 		BF071749256DF82200A2472F /* EpisodeListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF071748256DF82200A2472F /* EpisodeListViewModelTests.swift */; };
 		BF071751256E028B00A2472F /* EpisodeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF071750256E028B00A2472F /* EpisodeViewModelTests.swift */; };
+		BF1F2E4C259164420045C006 /* CrewMemberInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F2E4A259164420045C006 /* CrewMemberInfoViewController.swift */; };
+		BF1F2E4D259164420045C006 /* CrewMemberInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF1F2E4B259164420045C006 /* CrewMemberInfoViewController.xib */; };
+		BF1F2E52259166090045C006 /* CrewMemberInfoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F2E51259166090045C006 /* CrewMemberInfoCoordinator.swift */; };
+		BF1F2E572591862E0045C006 /* CrewMemberInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F2E562591862E0045C006 /* CrewMemberInfoViewModel.swift */; };
 		BF26A593257FC06400F23B02 /* Showable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A591257FC06400F23B02 /* Showable.swift */; };
 		BF26A594257FC06400F23B02 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A592257FC06400F23B02 /* Router.swift */; };
 		BF26A59D257FC08800F23B02 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A59C257FC08800F23B02 /* Coordinator.swift */; };
@@ -77,6 +81,10 @@
 		BF071740256DEE6100A2472F /* DateFormatterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterHelper.swift; sourceTree = "<group>"; };
 		BF071748256DF82200A2472F /* EpisodeListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListViewModelTests.swift; sourceTree = "<group>"; };
 		BF071750256E028B00A2472F /* EpisodeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewModelTests.swift; sourceTree = "<group>"; };
+		BF1F2E4A259164420045C006 /* CrewMemberInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewMemberInfoViewController.swift; sourceTree = "<group>"; };
+		BF1F2E4B259164420045C006 /* CrewMemberInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CrewMemberInfoViewController.xib; sourceTree = "<group>"; };
+		BF1F2E51259166090045C006 /* CrewMemberInfoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewMemberInfoCoordinator.swift; sourceTree = "<group>"; };
+		BF1F2E562591862E0045C006 /* CrewMemberInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewMemberInfoViewModel.swift; sourceTree = "<group>"; };
 		BF26A591257FC06400F23B02 /* Showable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Showable.swift; sourceTree = "<group>"; };
 		BF26A592257FC06400F23B02 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		BF26A59C257FC08800F23B02 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -141,9 +149,10 @@
 		BF0716B3256C298D00A2472F /* TheOfficeApp */ = {
 			isa = PBXGroup;
 			children = (
-				BF26A59B257FC07C00F23B02 /* Coordinators */,
 				BF26A590257FC03A00F23B02 /* Router */,
 				BF07173F256DEE4400A2472F /* Helpers */,
+				BF26A59B257FC07C00F23B02 /* Coordinators */,
+				BF071720256C7FD000A2472F /* ViewModel */,
 				BF07170D256C7EA500A2472F /* Scenes */,
 				BF0716F7256C371C00A2472F /* Models */,
 				BF0716F1256C347800A2472F /* Networking */,
@@ -205,6 +214,7 @@
 		BF07170D256C7EA500A2472F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BF1F2E49259163FD0045C006 /* CrewMemberInfo */,
 				BF26A5A1257FC42900F23B02 /* EpisodeDetail */,
 				BF07170E256C7EAC00A2472F /* EpisodesList */,
 			);
@@ -214,7 +224,6 @@
 		BF07170E256C7EAC00A2472F /* EpisodesList */ = {
 			isa = PBXGroup;
 			children = (
-				BF071720256C7FD000A2472F /* ViewModel */,
 				BF071717256C7EF200A2472F /* View */,
 			);
 			path = EpisodesList;
@@ -235,6 +244,7 @@
 			children = (
 				BF071721256C800800A2472F /* EpisodeListViewModel.swift */,
 				BF07172F256C934C00A2472F /* EpisodeViewModel.swift */,
+				BF1F2E562591862E0045C006 /* CrewMemberInfoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -281,6 +291,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		BF1F2E49259163FD0045C006 /* CrewMemberInfo */ = {
+			isa = PBXGroup;
+			children = (
+				BF1F2E4A259164420045C006 /* CrewMemberInfoViewController.swift */,
+				BF1F2E4B259164420045C006 /* CrewMemberInfoViewController.xib */,
+			);
+			path = CrewMemberInfo;
+			sourceTree = "<group>";
+		};
 		BF26A590257FC03A00F23B02 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +317,7 @@
 				BFCF965425856CAD00116F77 /* ApplicationCoordinator.swift */,
 				BF26A5BB257FC86B00F23B02 /* EpisodeListCoordinator.swift */,
 				BFCF96892586CCAF00116F77 /* EpisodeDetailCoordinator.swift */,
+				BF1F2E51259166090045C006 /* CrewMemberInfoCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -424,6 +444,7 @@
 			files = (
 				BF0716C1256C298E00A2472F /* LaunchScreen.storyboard in Resources */,
 				BF26A5D8257FDC4800F23B02 /* EpisodeTableViewCell.xib in Resources */,
+				BF1F2E4D259164420045C006 /* CrewMemberInfoViewController.xib in Resources */,
 				BFCF96852585882700116F77 /* EpisodeListViewController.xib in Resources */,
 				BF0716BE256C298E00A2472F /* Assets.xcassets in Resources */,
 				BF26A5A5257FC45D00F23B02 /* EpisodeDetailViewController.xib in Resources */,
@@ -454,12 +475,15 @@
 				BF0716B5256C298D00A2472F /* AppDelegate.swift in Sources */,
 				BF0716F3256C34C200A2472F /* WebService.swift in Sources */,
 				BF07173B256D7EEE00A2472F /* CrewMember.swift in Sources */,
+				BF1F2E52259166090045C006 /* CrewMemberInfoCoordinator.swift in Sources */,
 				BF0716F9256C37F700A2472F /* Episode.swift in Sources */,
 				BFCF968A2586CCAF00116F77 /* EpisodeDetailCoordinator.swift in Sources */,
+				BF1F2E4C259164420045C006 /* CrewMemberInfoViewController.swift in Sources */,
 				BFCF965525856CAD00116F77 /* ApplicationCoordinator.swift in Sources */,
 				BF26A59D257FC08800F23B02 /* Coordinator.swift in Sources */,
 				BFCF96842585882700116F77 /* EpisodeListViewController.swift in Sources */,
 				BF071709256C3B1D00A2472F /* Endpoints.swift in Sources */,
+				BF1F2E572591862E0045C006 /* CrewMemberInfoViewModel.swift in Sources */,
 				BF071741256DEE6100A2472F /* DateFormatterHelper.swift in Sources */,
 				BF071722256C800800A2472F /* EpisodeListViewModel.swift in Sources */,
 				BF26A5AD257FC50C00F23B02 /* OfficeRouter.swift in Sources */,
