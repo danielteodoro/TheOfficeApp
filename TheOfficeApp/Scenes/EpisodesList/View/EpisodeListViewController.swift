@@ -9,6 +9,7 @@ import UIKit
 
 protocol EpisodeListViewControllerDelegate {
     func didSelectEpisode(episodeVM: EpisodeViewModel)
+    func openRandomQuote()
 }
 
 class EpisodeListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -30,6 +31,19 @@ class EpisodeListViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         vm.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.setRandomQuoteButton()
+    }
+    
+    func setRandomQuoteButton() {
+        let randomQuoteButton = UIBarButtonItem.init(title: "Random Quote", style: .plain, target: self, action: #selector(openRandomQuote))
+        self.navigationItem.setRightBarButton(randomQuoteButton, animated: true)
+    }
+    
+    @objc func openRandomQuote() {
+        self.delegate?.openRandomQuote()
     }
     
     // MARK: - Table view data source

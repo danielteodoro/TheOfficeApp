@@ -31,4 +31,10 @@ extension EpisodeListCoordinator: EpisodeListViewControllerDelegate {
         let episodeDetailCoordinator = EpisodeDetailCoordinator(presenter: self.presenter, episodeVM: episodeVM)
         episodeDetailCoordinator.start()
     }
+    
+    func openRandomQuote() {
+        let randomQuoteCoordinator = RandomQuoteCoordinator(presenter: self.presenter)
+        randomQuoteCoordinator.start()
+    }
+    
 }

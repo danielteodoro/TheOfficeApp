@@ -17,4 +17,7 @@ class Endpoints {
     public func episodes() -> URL {
         return URL.init(string: self.baseURLString()+"episodes/")!
     }
+    public func randomQuote() -> URL {
+        return URL.init(string: self.baseURLString()+"quotes/random/")!
+    }
 }
