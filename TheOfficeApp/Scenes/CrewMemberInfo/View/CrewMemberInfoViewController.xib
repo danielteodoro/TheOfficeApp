@@ -34,7 +34,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roles Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olQ-ng-cUm">
-                    <rect key="frame" x="16" y="373" width="101" height="24"/>
+                    <rect key="frame" x="16" y="405" width="109.5" height="26.5"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="all roles:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfu-fF-jSo">
+                    <rect key="frame" x="16" y="373" width="71.5" height="24"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -43,11 +49,13 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="Kfu-fF-jSo" firstAttribute="top" secondItem="qNk-CT-zux" secondAttribute="bottom" constant="16" id="47S-ou-hQT"/>
                 <constraint firstItem="Qfc-2b-IZe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="8yL-rZ-Gly"/>
+                <constraint firstItem="olQ-ng-cUm" firstAttribute="top" secondItem="Kfu-fF-jSo" secondAttribute="bottom" constant="8" id="D7o-hs-4dC"/>
                 <constraint firstItem="qNk-CT-zux" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="EqC-eR-AQN"/>
                 <constraint firstItem="qNk-CT-zux" firstAttribute="top" secondItem="Qfc-2b-IZe" secondAttribute="bottom" constant="16" id="WFA-sq-3O5"/>
-                <constraint firstItem="olQ-ng-cUm" firstAttribute="top" secondItem="qNk-CT-zux" secondAttribute="bottom" constant="16" id="drB-R0-9qn"/>
                 <constraint firstItem="olQ-ng-cUm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="fVP-WU-9w3"/>
+                <constraint firstItem="Kfu-fF-jSo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="yPI-uR-RgG"/>
                 <constraint firstItem="qNk-CT-zux" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" multiplier="0.75" id="yd3-He-PdN"/>
             </constraints>
             <point key="canvasLocation" x="141" y="80"/>

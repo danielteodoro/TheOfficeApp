@@ -24,7 +24,7 @@ class EpisodeDetailViewController: UIViewController {
     
     init(viewModel: EpisodeViewModel) {
         self.vm = viewModel
-        super.init(nibName: "EpisodeDetailViewController", bundle: nil)
+        super.init(nibName: EpisodeDetailViewController.className, bundle: nil)
     }
     
     required init?(coder: NSCoder) {

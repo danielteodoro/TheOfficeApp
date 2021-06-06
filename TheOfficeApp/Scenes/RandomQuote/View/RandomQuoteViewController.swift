@@ -14,7 +14,8 @@ class RandomQuoteViewController: UIViewController {
     
     let vm: RandomQuoteViewModel = RandomQuoteViewModel()
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
         vm.delegate = self
     }
     

@@ -19,6 +19,9 @@ class WebServiceMock: WebServicing {
     func fetchEpisodes(completion: @escaping (Result<[Episode], Error>) -> Void) {
         completion(result)
     }
+    
+    func fetchRandomQuote(completion: @escaping (Result<Quote, Error>) -> Void) {
+    }
 }
 
 class EpisodeListViewModelDelegateMock: EpisodeListViewModelDelegate{
@@ -52,7 +55,7 @@ class EpisodeListViewModelTests: XCTestCase {
     }
     
     func testSuccess() {
-        serviceMock.result = .success([Episode(_id: "123", title: "Pilot", description: "Michael makes a joke.", airDate: "test date", director: CrewMember(_id: "321", name: "Greg Daniels", role: "Director"))])
+        serviceMock.result = .success([Episode(_id: "123", title: "Pilot", description: "Michael makes a joke.", airDate: "test date", director: CrewMember(_id: "321", name: "Greg Daniels", role: "Director"), writer: CrewMember(_id: "321", name: "Greg Daniels", role: "Director"))])
         vm.loadEpisodes()
         
         XCTAssertEqual(delegate.didLoadEpisodesCount, 1)

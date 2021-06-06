@@ -27,6 +27,10 @@ class EpisodeViewModel {
         return self.episode.director.name
     }
     
+    var directorNameLabelText: String {
+        return "Director: " + self.episode.director.name
+    }
+    
     var writerName: String {
         return self.episode.writer.name
     }

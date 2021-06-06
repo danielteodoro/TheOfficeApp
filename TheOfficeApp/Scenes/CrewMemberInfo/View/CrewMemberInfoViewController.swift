@@ -18,7 +18,7 @@ class CrewMemberInfoViewController: UIViewController {
     init(crewMember: CrewMember, title: String) {
         self.vm = CrewMemberInfoViewModel(crewMember: crewMember, title: title)
         
-        super.init(nibName: "CrewMemberInfoViewController", bundle: nil)
+        super.init(nibName: CrewMemberInfoViewController.className, bundle: nil)
     }
     
     required init?(coder: NSCoder) {

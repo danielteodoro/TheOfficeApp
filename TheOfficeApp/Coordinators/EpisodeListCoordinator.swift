@@ -16,7 +16,7 @@ class EpisodeListCoordinator: Coordinator {
   }
   
   func start() {
-    let episodeListViewController = EpisodeListViewController(nibName: "EpisodeListViewController", bundle: nil)
+    let episodeListViewController = EpisodeListViewController(nibName: EpisodeListViewController.className, bundle: nil)
     episodeListViewController.delegate = self
     episodeListViewController.title = "Episodes List"
     presenter.push(episodeListViewController, animated: true, completion:nil)

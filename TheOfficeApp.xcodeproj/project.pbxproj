@@ -42,6 +42,8 @@
 		BF26A5D7257FDC4800F23B02 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A5D5257FDC4800F23B02 /* EpisodeTableViewCell.swift */; };
 		BF26A5D8257FDC4800F23B02 /* EpisodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF26A5D6257FDC4800F23B02 /* EpisodeTableViewCell.xib */; };
 		BF47F5B325704C87000FC71A /* DateFormatterHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF47F5B225704C87000FC71A /* DateFormatterHelperTests.swift */; };
+		BF8C16FC266C5FA6008B3188 /* NSObjectHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8C16FB266C5FA6008B3188 /* NSObjectHelper.swift */; };
+		BF8C1701266C67BA008B3188 /* UIViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8C1700266C67BA008B3188 /* UIViewControllerHelper.swift */; };
 		BFCF965525856CAD00116F77 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCF965425856CAD00116F77 /* ApplicationCoordinator.swift */; };
 		BFCF96842585882700116F77 /* EpisodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCF96822585882700116F77 /* EpisodeListViewController.swift */; };
 		BFCF96852585882700116F77 /* EpisodeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFCF96832585882700116F77 /* EpisodeListViewController.xib */; };
@@ -107,6 +109,8 @@
 		BF26A5D5257FDC4800F23B02 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		BF26A5D6257FDC4800F23B02 /* EpisodeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeTableViewCell.xib; sourceTree = "<group>"; };
 		BF47F5B225704C87000FC71A /* DateFormatterHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterHelperTests.swift; sourceTree = "<group>"; };
+		BF8C16FB266C5FA6008B3188 /* NSObjectHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectHelper.swift; sourceTree = "<group>"; };
+		BF8C1700266C67BA008B3188 /* UIViewControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerHelper.swift; sourceTree = "<group>"; };
 		BFCF965425856CAD00116F77 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		BFCF96822585882700116F77 /* EpisodeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListViewController.swift; sourceTree = "<group>"; };
 		BFCF96832585882700116F77 /* EpisodeListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeListViewController.xib; sourceTree = "<group>"; };
@@ -166,7 +170,6 @@
 				BF26A59B257FC07C00F23B02 /* Coordinators */,
 				BF0716F1256C347800A2472F /* Networking */,
 				BF0716F7256C371C00A2472F /* Models */,
-				BF071720256C7FD000A2472F /* ViewModel */,
 				BF07170D256C7EA500A2472F /* Scenes */,
 				BF0716E7256C2D7F00A2472F /* Assets */,
 				BF0716B4256C298D00A2472F /* AppDelegate.swift */,
@@ -239,6 +242,7 @@
 		BF07170E256C7EAC00A2472F /* EpisodesList */ = {
 			isa = PBXGroup;
 			children = (
+				BF071720256C7FD000A2472F /* ViewModel */,
 				BF071717256C7EF200A2472F /* View */,
 			);
 			path = EpisodesList;
@@ -258,9 +262,6 @@
 			isa = PBXGroup;
 			children = (
 				BF071721256C800800A2472F /* EpisodeListViewModel.swift */,
-				BF07172F256C934C00A2472F /* EpisodeViewModel.swift */,
-				BF1F2E562591862E0045C006 /* CrewMemberInfoViewModel.swift */,
-				BF1F2E6B2592BAC00045C006 /* RandomQuoteViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -278,6 +279,8 @@
 			isa = PBXGroup;
 			children = (
 				BF071740256DEE6100A2472F /* DateFormatterHelper.swift */,
+				BF8C16FB266C5FA6008B3188 /* NSObjectHelper.swift */,
+				BF8C1700266C67BA008B3188 /* UIViewControllerHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -310,8 +313,8 @@
 		BF1F2E49259163FD0045C006 /* CrewMemberInfo */ = {
 			isa = PBXGroup;
 			children = (
-				BF1F2E4A259164420045C006 /* CrewMemberInfoViewController.swift */,
-				BF1F2E4B259164420045C006 /* CrewMemberInfoViewController.xib */,
+				BF8C16E5266C41F9008B3188 /* ViewModel */,
+				BF8C16E1266C41F1008B3188 /* View */,
 			);
 			path = CrewMemberInfo;
 			sourceTree = "<group>";
@@ -319,8 +322,8 @@
 		BF1F2E5E25929CDD0045C006 /* RandomQuote */ = {
 			isa = PBXGroup;
 			children = (
-				BF1F2E5F25929D640045C006 /* RandomQuoteViewController.swift */,
-				BF1F2E6025929D640045C006 /* RandomQuoteViewController.xib */,
+				BF8C16E0266C4193008B3188 /* ViewModel */,
+				BF8C16DC266C4189008B3188 /* View */,
 			);
 			path = RandomQuote;
 			sourceTree = "<group>";
@@ -351,8 +354,8 @@
 		BF26A5A1257FC42900F23B02 /* EpisodeDetail */ = {
 			isa = PBXGroup;
 			children = (
-				BF26A5A2257FC45D00F23B02 /* EpisodeDetailViewController.swift */,
-				BF26A5A3257FC45D00F23B02 /* EpisodeDetailViewController.xib */,
+				BF8C16EA266C4265008B3188 /* ViewModel */,
+				BF8C16E6266C425F008B3188 /* View */,
 			);
 			path = EpisodeDetail;
 			sourceTree = "<group>";
@@ -363,6 +366,57 @@
 				BF47F5B225704C87000FC71A /* DateFormatterHelperTests.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BF8C16DC266C4189008B3188 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF1F2E5F25929D640045C006 /* RandomQuoteViewController.swift */,
+				BF1F2E6025929D640045C006 /* RandomQuoteViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF8C16E0266C4193008B3188 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BF1F2E6B2592BAC00045C006 /* RandomQuoteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BF8C16E1266C41F1008B3188 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF1F2E4A259164420045C006 /* CrewMemberInfoViewController.swift */,
+				BF1F2E4B259164420045C006 /* CrewMemberInfoViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF8C16E5266C41F9008B3188 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BF1F2E562591862E0045C006 /* CrewMemberInfoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BF8C16E6266C425F008B3188 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF26A5A2257FC45D00F23B02 /* EpisodeDetailViewController.swift */,
+				BF26A5A3257FC45D00F23B02 /* EpisodeDetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF8C16EA266C4265008B3188 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BF07172F256C934C00A2472F /* EpisodeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -502,6 +556,7 @@
 				BF1F2E762592BC120045C006 /* Character.swift in Sources */,
 				BF0716B5256C298D00A2472F /* AppDelegate.swift in Sources */,
 				BF0716F3256C34C200A2472F /* WebService.swift in Sources */,
+				BF8C16FC266C5FA6008B3188 /* NSObjectHelper.swift in Sources */,
 				BF07173B256D7EEE00A2472F /* CrewMember.swift in Sources */,
 				BF1F2E52259166090045C006 /* CrewMemberInfoCoordinator.swift in Sources */,
 				BF0716F9256C37F700A2472F /* Episode.swift in Sources */,
@@ -518,6 +573,7 @@
 				BF071722256C800800A2472F /* EpisodeListViewModel.swift in Sources */,
 				BF26A5AD257FC50C00F23B02 /* OfficeRouter.swift in Sources */,
 				BF1F2E6125929D640045C006 /* RandomQuoteViewController.swift in Sources */,
+				BF8C1701266C67BA008B3188 /* UIViewControllerHelper.swift in Sources */,
 				BF1F2E712592BB4F0045C006 /* Quote.swift in Sources */,
 				BF26A5D7257FDC4800F23B02 /* EpisodeTableViewCell.swift in Sources */,
 				BF26A5A4257FC45D00F23B02 /* EpisodeDetailViewController.swift in Sources */,

@@ -23,8 +23,8 @@ class EpisodeListViewController: UIViewController, UITableViewDelegate, UITableV
             episodeListTableView?.dataSource = self
             episodeListTableView?.delegate = self
             
-            let episodeCellNib = UINib(nibName: String(describing: EpisodeTableViewCell.self), bundle: nil)
-            episodeListTableView.register(episodeCellNib, forCellReuseIdentifier: String(describing: EpisodeTableViewCell.self))
+            let episodeCellNib = UINib(nibName: EpisodeTableViewCell.className, bundle: nil)
+            episodeListTableView.register(episodeCellNib, forCellReuseIdentifier: EpisodeTableViewCell.className)
         }
     }
     
@@ -57,7 +57,7 @@ class EpisodeListViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: EpisodeTableViewCell.self)) as! EpisodeTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: EpisodeTableViewCell.className) as! EpisodeTableViewCell
         
         
         cell.presentData(episodeVM: vm.episodesVM[indexPath.row])
@@ -79,6 +79,6 @@ extension EpisodeListViewController: EpisodeListViewModelDelegate {
     }
     
     func errorOnLoadingEpisodes(error: Error) {
-        print(error)
+        displayError(error)
     }
 }
