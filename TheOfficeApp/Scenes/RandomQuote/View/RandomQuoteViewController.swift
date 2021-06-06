@@ -31,6 +31,6 @@ extension RandomQuoteViewController: RandomQuoteViewModelDelegate {
     }
     
     func errorOnLoadingQuote(error: Error) {
-        print(error.localizedDescription)
+        displayError(error)
     }
 }
