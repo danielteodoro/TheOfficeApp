@@ -23,6 +23,10 @@ class EpisodeListCoordinator: Coordinator {
     
     self.episodeListViewController = episodeListViewController
   }
+    
+    func stop() {
+        
+    }
 }
 
 extension EpisodeListCoordinator: EpisodeListViewControllerDelegate {

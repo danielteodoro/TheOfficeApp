@@ -15,10 +15,10 @@ class CrewMemberInfoViewController: UIViewController {
     
     private var vm: CrewMemberInfoViewModel
     
-    init(crewMember: CrewMember, title: String) {
-        self.vm = CrewMemberInfoViewModel(crewMember: crewMember, title: title)
+    init(viewModel: CrewMemberInfoViewModel) {
+        self.vm = viewModel
         
-        super.init(nibName: CrewMemberInfoViewController.className, bundle: nil)
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {

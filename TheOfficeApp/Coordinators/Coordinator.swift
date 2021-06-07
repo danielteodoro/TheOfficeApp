@@ -6,5 +6,6 @@
 //
 
 protocol Coordinator {
-  func start()
+    func start()
+    func stop()
 }

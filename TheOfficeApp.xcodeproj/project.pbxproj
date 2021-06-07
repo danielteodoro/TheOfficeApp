@@ -166,11 +166,11 @@
 			isa = PBXGroup;
 			children = (
 				BF26A590257FC03A00F23B02 /* Router */,
-				BF07173F256DEE4400A2472F /* Helpers */,
 				BF26A59B257FC07C00F23B02 /* Coordinators */,
 				BF0716F1256C347800A2472F /* Networking */,
 				BF0716F7256C371C00A2472F /* Models */,
 				BF07170D256C7EA500A2472F /* Scenes */,
+				BF07173F256DEE4400A2472F /* Helpers */,
 				BF0716E7256C2D7F00A2472F /* Assets */,
 				BF0716B4256C298D00A2472F /* AppDelegate.swift */,
 				BF0716B6256C298D00A2472F /* SceneDelegate.swift */,

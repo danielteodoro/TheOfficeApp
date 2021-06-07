@@ -25,6 +25,11 @@ class EpisodeDetailCoordinator: Coordinator {
         
         self.episodeDetailViewController = episodeDetailViewController
     }
+    
+    func stop() {
+        
+    }
+    
 }
 
 extension EpisodeDetailCoordinator: EpisodeDetailViewControllerDelegate {

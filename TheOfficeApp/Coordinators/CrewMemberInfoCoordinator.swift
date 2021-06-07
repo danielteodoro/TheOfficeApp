@@ -10,9 +10,11 @@ import UIKit
 class CrewMemberInfoCoordinator: Coordinator {
     
     private let presenter: Router
-    private var crewMemberInfoViewController: CrewMemberInfoViewController?
     private var crewMember: CrewMember
     private var title: String
+    
+    private var viewModel: CrewMemberInfoViewModel?
+    private var view: CrewMemberInfoViewController?
     
     init(presenter: Router, crewMember: CrewMember, title: String){
         self.presenter = presenter
@@ -21,9 +23,15 @@ class CrewMemberInfoCoordinator: Coordinator {
     }
     
     func start() {
-        let crewMemberInfoViewController = CrewMemberInfoViewController(crewMember: crewMember, title: title)
+        let viewModel = CrewMemberInfoViewModel(crewMember: crewMember, title: title)
+        let crewMemberInfoViewController = CrewMemberInfoViewController(viewModel: viewModel)
         presenter.present(crewMemberInfoViewController, animated: true)
         
-        self.crewMemberInfoViewController = crewMemberInfoViewController
+        self.viewModel = viewModel
+        self.view = crewMemberInfoViewController
+    }
+    
+    func stop() {
+        
     }
 }

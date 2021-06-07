@@ -9,12 +9,17 @@ import UIKit
 
 extension UIViewController {
 
-    func displayError(_ error: Error) {
+    func displayError(_ error: Error, cancelHandler: ((UIAlertAction) -> Void)? = nil, retryHandler: ((UIAlertAction) -> Void)? = nil) {
         let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default)
-        { action -> Void in
-            alert.dismiss(animated: true)
-        })
+        
+        if let cancelHandler = cancelHandler {
+            alert.addAction(UIAlertAction(title: "cancel", style: .default, handler: cancelHandler))
+        } 
+        
+        if let retryHandler = retryHandler {
+            alert.addAction(UIAlertAction(title: "retry", style: .default, handler: retryHandler))
+        }
+        
         self.present(alert, animated: true, completion: nil)
     }
 }

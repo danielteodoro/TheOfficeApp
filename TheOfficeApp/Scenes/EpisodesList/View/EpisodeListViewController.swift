@@ -79,6 +79,8 @@ extension EpisodeListViewController: EpisodeListViewModelDelegate {
     }
     
     func errorOnLoadingEpisodes(error: Error) {
-        displayError(error)
+        displayError(error, retryHandler: {_ in
+            self.vm.loadEpisodes()
+        })
     }
 }

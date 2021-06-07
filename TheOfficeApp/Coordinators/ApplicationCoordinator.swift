@@ -28,4 +28,7 @@ class ApplicationCoordinator: Coordinator {
         window.makeKeyAndVisible()
     }
     
+    func stop() {
+        
+    }
 }
