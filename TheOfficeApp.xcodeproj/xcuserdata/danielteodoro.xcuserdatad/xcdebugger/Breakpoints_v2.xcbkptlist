@@ -216,7 +216,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6149FAA9-43B6-4C04-81FB-FF88B8B62AF2"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheOfficeApp/Scenes/RandomQuote/ViewModel/RandomQuoteViewModel.swift"
@@ -248,7 +248,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2B6D1520-CB14-47E6-B488-F8A85544CE50"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheOfficeApp/Helpers/UIViewControllerHelper.swift"
@@ -257,6 +257,22 @@
             startingLineNumber = "27"
             endingLineNumber = "27"
             landmarkName = "showLoading(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5137E9AA-0A76-4EC8-AB59-BEDE2E7E6129"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheOfficeAppTests/Scenes/RandomQuote/ViewModel/RandomQuoteViewModelTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "testSuccess()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

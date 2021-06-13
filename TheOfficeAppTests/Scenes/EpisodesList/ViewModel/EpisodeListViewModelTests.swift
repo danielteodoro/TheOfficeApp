@@ -15,19 +15,22 @@ enum ServiceError: Error {
 class WebServiceMock: WebServicing {
     
     var result: Result<[Episode], Error> = .failure(ServiceError.generic)
+    var quoteResult: Result<Quote, Error> = .failure(ServiceError.generic)
     
     func fetchEpisodes(completion: @escaping (Result<[Episode], Error>) -> Void) {
         completion(result)
     }
     
     func fetchRandomQuote(completion: @escaping (Result<Quote, Error>) -> Void) {
+        completion(quoteResult)
     }
 }
 
-class EpisodeListViewModelDelegateMock: EpisodeListViewModelDelegate{
+class EpisodeListViewModelDelegateMock: EpisodeListViewDelegate{
     
     var errorOnLoadingEpisodesCount = 0
     var didLoadEpisodesCount = 0
+    var didCallShowLoading = false
     
     func didLoadEpisodes() {
         didLoadEpisodesCount += 1
@@ -35,6 +38,10 @@ class EpisodeListViewModelDelegateMock: EpisodeListViewModelDelegate{
     
     func errorOnLoadingEpisodes(error: Error) {
         errorOnLoadingEpisodesCount += 1
+    }
+
+    func showLoading(_ show: Bool) {
+        didCallShowLoading = show
     }
 }
 
@@ -44,7 +51,7 @@ class EpisodeListViewModelTests: XCTestCase {
     private let delegate = EpisodeListViewModelDelegateMock()
     lazy var vm: EpisodeListViewModel = {
         let vm = EpisodeListViewModel(service: serviceMock)
-        vm.delegate = delegate
+        vm.viewDelegate = delegate
         return vm
     }()
     

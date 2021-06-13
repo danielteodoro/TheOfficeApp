@@ -31,7 +31,7 @@ class RandomQuoteViewModel {
     }
     
     var characterFullName: String {
-        return  String("\(self.quote!.character.firstname) \(self.quote!.character.lastname)")
+        return  String("\(self.quote!.character.lastname), \(self.quote!.character.firstname)")
     }
     
     init(service: WebServicing = WebService()) {
