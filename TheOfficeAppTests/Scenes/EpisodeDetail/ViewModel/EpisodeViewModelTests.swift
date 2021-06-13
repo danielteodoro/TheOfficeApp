@@ -23,9 +23,24 @@ class EpisodeViewModelTests: XCTestCase {
     func testAirDate() {
         XCTAssertEqual(vm.airDate, "Mar 29, 2005")
     }
-//    
-//    func testDirector() {
-//        XCTAssertEqual(vm.director, "Greg Daniels")
-//    }
-
+    
+    func testDirectorName() {
+        XCTAssertEqual(vm.directorName, "Greg Daniels")
+    }
+    
+    func testDirectorNameLabelText() {
+        XCTAssertEqual(vm.directorNameLabelText, "Director: Greg Daniels")
+    }
+    
+    func testWriterName() {
+        XCTAssertEqual(vm.writerName, "Greg Daniels")
+    }
+    
+    func testDirector() {
+        XCTAssertEqual(vm.getDirector(), CrewMember(_id: "321", name: "Greg Daniels", role: "Director"))
+    }
+    
+    func testWriter() {
+        XCTAssertEqual(vm.getWriter(), CrewMember(_id: "321", name: "Greg Daniels", role: "Director"))
+    }
 }
