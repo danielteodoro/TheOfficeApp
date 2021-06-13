@@ -41,6 +41,7 @@
 		BF26A5BC257FC86B00F23B02 /* EpisodeListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A5BB257FC86B00F23B02 /* EpisodeListCoordinator.swift */; };
 		BF26A5D7257FDC4800F23B02 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26A5D5257FDC4800F23B02 /* EpisodeTableViewCell.swift */; };
 		BF26A5D8257FDC4800F23B02 /* EpisodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF26A5D6257FDC4800F23B02 /* EpisodeTableViewCell.xib */; };
+		BF41237B2675627800AB6AEF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF41237A2675627800AB6AEF /* LoadingView.swift */; };
 		BF47F5B325704C87000FC71A /* DateFormatterHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF47F5B225704C87000FC71A /* DateFormatterHelperTests.swift */; };
 		BF8C16FC266C5FA6008B3188 /* NSObjectHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8C16FB266C5FA6008B3188 /* NSObjectHelper.swift */; };
 		BF8C1701266C67BA008B3188 /* UIViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8C1700266C67BA008B3188 /* UIViewControllerHelper.swift */; };
@@ -108,6 +109,7 @@
 		BF26A5BB257FC86B00F23B02 /* EpisodeListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListCoordinator.swift; sourceTree = "<group>"; };
 		BF26A5D5257FDC4800F23B02 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		BF26A5D6257FDC4800F23B02 /* EpisodeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeTableViewCell.xib; sourceTree = "<group>"; };
+		BF41237A2675627800AB6AEF /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		BF47F5B225704C87000FC71A /* DateFormatterHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterHelperTests.swift; sourceTree = "<group>"; };
 		BF8C16FB266C5FA6008B3188 /* NSObjectHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectHelper.swift; sourceTree = "<group>"; };
 		BF8C1700266C67BA008B3188 /* UIViewControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerHelper.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				BF071740256DEE6100A2472F /* DateFormatterHelper.swift */,
 				BF8C16FB266C5FA6008B3188 /* NSObjectHelper.swift */,
 				BF8C1700266C67BA008B3188 /* UIViewControllerHelper.swift */,
+				BF41237A2675627800AB6AEF /* LoadingView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				BF8C1701266C67BA008B3188 /* UIViewControllerHelper.swift in Sources */,
 				BF1F2E712592BB4F0045C006 /* Quote.swift in Sources */,
 				BF26A5D7257FDC4800F23B02 /* EpisodeTableViewCell.swift in Sources */,
+				BF41237B2675627800AB6AEF /* LoadingView.swift in Sources */,
 				BF26A5A4257FC45D00F23B02 /* EpisodeDetailViewController.swift in Sources */,
 				BF071730256C934C00A2472F /* EpisodeViewModel.swift in Sources */,
 				BF26A5BC257FC86B00F23B02 /* EpisodeListCoordinator.swift in Sources */,

@@ -30,7 +30,8 @@ class EpisodeListViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        vm.delegate = self
+        vm.viewDelegate = self
+        vm.loadEpisodes()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -73,7 +74,8 @@ class EpisodeListViewController: UIViewController, UITableViewDelegate, UITableV
     
 }
 
-extension EpisodeListViewController: EpisodeListViewModelDelegate {
+extension EpisodeListViewController: EpisodeListViewDelegate {
+    
     func didLoadEpisodes() {
         self.episodeListTableView.reloadData()
     }

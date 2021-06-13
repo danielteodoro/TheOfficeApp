@@ -11,15 +11,16 @@ protocol RandomQuoteCoordinatorDelegate {
     func closeRandomQuote()
 }
 
-protocol RandomQuoteViewModelDelegate {
+protocol RandomQuoteViewDelegate {
     func didLoadQuote()
     func errorOnLoadingQuote(error: Error)
+    func showLoading(_ show: Bool)
 }
 
 class RandomQuoteViewModel {
     
     var coordinatorDelegate: RandomQuoteCoordinatorDelegate?
-    var viewDelegate: RandomQuoteViewModelDelegate?
+    var viewDelegate: RandomQuoteViewDelegate?
     
     var service: WebServicing
     
@@ -35,18 +36,19 @@ class RandomQuoteViewModel {
     
     init(service: WebServicing = WebService()) {
         self.service = service
-        loadRandomQuote()
     }
     
     func loadRandomQuote() {
+        viewDelegate?.showLoading(true)
         service.fetchRandomQuote() { [weak self] result in
             switch result {
             case .success(let quote):
                 self?.quote = quote
                 self?.viewDelegate?.didLoadQuote()
-                print(quote.content)
+                self?.viewDelegate?.showLoading(false)
             case .failure(let error):
                 self?.viewDelegate?.errorOnLoadingQuote(error: error)
+                self?.viewDelegate?.showLoading(false)
                 break
             }
         }

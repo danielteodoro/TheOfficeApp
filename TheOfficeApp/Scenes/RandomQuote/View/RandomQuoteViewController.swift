@@ -26,6 +26,7 @@ class RandomQuoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         vm.viewDelegate = self
+        vm.loadRandomQuote()
     }
     
     func setQuoteContent() {
@@ -34,7 +35,8 @@ class RandomQuoteViewController: UIViewController {
     }
 }
 
-extension RandomQuoteViewController: RandomQuoteViewModelDelegate {
+extension RandomQuoteViewController: RandomQuoteViewDelegate {
+    
     func didLoadQuote() {
         self.setQuoteContent()
     }

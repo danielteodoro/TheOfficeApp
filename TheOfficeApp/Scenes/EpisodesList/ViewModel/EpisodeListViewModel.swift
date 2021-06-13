@@ -7,9 +7,10 @@
 
 import Foundation
 
-protocol EpisodeListViewModelDelegate {
+protocol EpisodeListViewDelegate {
     func didLoadEpisodes()
     func errorOnLoadingEpisodes(error: Error)
+    func showLoading(_ show: Bool)
 }
 
 class EpisodeListViewModel {
@@ -17,21 +18,23 @@ class EpisodeListViewModel {
     var service: WebServicing
     
     var episodesVM = [EpisodeViewModel]()
-    var delegate: EpisodeListViewModelDelegate?
+    var viewDelegate: EpisodeListViewDelegate?
     
     init(service: WebServicing = WebService()) {
         self.service = service
-       loadEpisodes()
     }
     
     func loadEpisodes() {
+        self.viewDelegate?.showLoading(true)
         service.fetchEpisodes() { [weak self] result in
             switch result {
             case .success(let episodes):
                 self?.episodesVM = episodes.map(EpisodeViewModel.init)
-                self?.delegate?.didLoadEpisodes()
+                self?.viewDelegate?.didLoadEpisodes()
+                self?.viewDelegate?.showLoading(false)
             case .failure(let error):
-                self?.delegate?.errorOnLoadingEpisodes(error: error)
+                self?.viewDelegate?.errorOnLoadingEpisodes(error: error)
+                self?.viewDelegate?.showLoading(false)
             }
         }
     }

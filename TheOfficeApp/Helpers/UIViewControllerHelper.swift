@@ -22,4 +22,8 @@ extension UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func showLoading(_ show: Bool)  {
+        show ? LoadingView.sharedInstance.showIndicator() : LoadingView.sharedInstance.hideIndicator()
+    }
 }
