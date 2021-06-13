@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EpisodeDetailViewController" customModule="TheOfficeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="airDateLabel" destination="Oho-a9-ZC8" id="HUi-8S-XKd"/>
+                <outlet property="descriptionLabel" destination="CNd-3d-YZz" id="ASD-WS-2Gb"/>
+                <outlet property="directorsButton" destination="rzQ-1J-YoG" id="bTs-nP-awf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="writtersButton" destination="tHG-M6-5hW" id="Fw1-FC-2AG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNd-3d-YZz">
+                    <rect key="frame" x="16" y="60" width="382" height="24"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzQ-1J-YoG">
+                    <rect key="frame" x="16" y="143.5" width="119" height="32"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                    <state key="normal" title="Directors button"/>
+                    <connections>
+                        <action selector="openDirectorsInfo:" destination="-1" eventType="touchUpInside" id="MKh-5H-ZXM"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oho-a9-ZC8">
+                    <rect key="frame" x="16" y="108" width="39.5" height="19.5"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHG-M6-5hW">
+                    <rect key="frame" x="294" y="143.5" width="104" height="32"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                    <state key="normal" title="Writers button"/>
+                    <connections>
+                        <action selector="openWritersInfo:" destination="-1" eventType="touchUpInside" id="mAb-aY-Adt"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="CNd-3d-YZz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="0Kq-cI-36e"/>
+                <constraint firstItem="rzQ-1J-YoG" firstAttribute="top" secondItem="Oho-a9-ZC8" secondAttribute="bottom" constant="16" id="44k-Vb-b0r"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tHG-M6-5hW" secondAttribute="trailing" constant="16" id="4Sy-GB-acR"/>
+                <constraint firstItem="Oho-a9-ZC8" firstAttribute="top" secondItem="CNd-3d-YZz" secondAttribute="bottom" constant="24" id="EpW-vX-o3o"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CNd-3d-YZz" secondAttribute="trailing" constant="16" id="J5G-aA-SaG"/>
+                <constraint firstItem="tHG-M6-5hW" firstAttribute="bottom" secondItem="rzQ-1J-YoG" secondAttribute="bottom" id="YDf-pw-PXa"/>
+                <constraint firstItem="rzQ-1J-YoG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="bnb-cl-Avh"/>
+                <constraint firstItem="Oho-a9-ZC8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dzS-2L-d06"/>
+                <constraint firstItem="CNd-3d-YZz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="lEa-mj-msb"/>
+            </constraints>
+            <point key="canvasLocation" x="105.79710144927537" y="61.607142857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
