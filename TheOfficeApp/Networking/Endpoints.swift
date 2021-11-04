@@ -8,16 +8,13 @@
 import Foundation
 
 
-class Endpoints {
+enum Endpoints: String {
+    case episodes = "episodes/"
+    case randomQuote = "quotes/random"
     
-    func baseURLString() -> String! {
-        return "https://officeapi.dev/api/"
-    }
+    var baseURL: String { "https://officeapi.dev/api/" }
     
-    public func episodes() -> URL {
-        return URL.init(string: self.baseURLString()+"episodes/")!
-    }
-    public func randomQuote() -> URL {
-        return URL.init(string: self.baseURLString()+"quotes/random/")!
+    var url: URL? {
+        URL(string: baseURL + self.rawValue)
     }
 }

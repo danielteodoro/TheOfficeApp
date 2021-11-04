@@ -45,6 +45,7 @@
 		BF4123822675AB2300AB6AEF /* CrewMemberInfoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4123812675AB2300AB6AEF /* CrewMemberInfoViewModelTests.swift */; };
 		BF41239A2675AF3000AB6AEF /* RandomQuoteViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4123992675AF3000AB6AEF /* RandomQuoteViewModelTests.swift */; };
 		BF47F5B325704C87000FC71A /* DateFormatterHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF47F5B225704C87000FC71A /* DateFormatterHelperTests.swift */; };
+		BF693C482724B25E00D033D0 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF693C472724B25E00D033D0 /* MainCoordinator.swift */; };
 		BF8C16FC266C5FA6008B3188 /* NSObjectHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8C16FB266C5FA6008B3188 /* NSObjectHelper.swift */; };
 		BF8C1701266C67BA008B3188 /* UIViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8C1700266C67BA008B3188 /* UIViewControllerHelper.swift */; };
 		BFCF965525856CAD00116F77 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCF965425856CAD00116F77 /* ApplicationCoordinator.swift */; };
@@ -115,6 +116,7 @@
 		BF4123812675AB2300AB6AEF /* CrewMemberInfoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewMemberInfoViewModelTests.swift; sourceTree = "<group>"; };
 		BF4123992675AF3000AB6AEF /* RandomQuoteViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuoteViewModelTests.swift; sourceTree = "<group>"; };
 		BF47F5B225704C87000FC71A /* DateFormatterHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterHelperTests.swift; sourceTree = "<group>"; };
+		BF693C472724B25E00D033D0 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		BF8C16FB266C5FA6008B3188 /* NSObjectHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectHelper.swift; sourceTree = "<group>"; };
 		BF8C1700266C67BA008B3188 /* UIViewControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerHelper.swift; sourceTree = "<group>"; };
 		BFCF965425856CAD00116F77 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 				BFCF96892586CCAF00116F77 /* EpisodeDetailCoordinator.swift */,
 				BF1F2E51259166090045C006 /* CrewMemberInfoCoordinator.swift */,
 				BF1F2E6625929E470045C006 /* RandomQuoteCoordinator.swift */,
+				BF693C472724B25E00D033D0 /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 				BF071722256C800800A2472F /* EpisodeListViewModel.swift in Sources */,
 				BF26A5AD257FC50C00F23B02 /* OfficeRouter.swift in Sources */,
 				BF1F2E6125929D640045C006 /* RandomQuoteViewController.swift in Sources */,
+				BF693C482724B25E00D033D0 /* MainCoordinator.swift in Sources */,
 				BF8C1701266C67BA008B3188 /* UIViewControllerHelper.swift in Sources */,
 				BF1F2E712592BB4F0045C006 /* Quote.swift in Sources */,
 				BF26A5D7257FDC4800F23B02 /* EpisodeTableViewCell.swift in Sources */,

@@ -40,10 +40,10 @@ class RandomQuoteViewModel {
     
     func loadRandomQuote() {
         viewDelegate?.showLoading(true)
-        service.fetchRandomQuote() { [weak self] result in
+        service.fetch(from: Endpoints.randomQuote, with: QuoteResponse.self) { [weak self] result in
             switch result {
             case .success(let quote):
-                self?.quote = quote
+                self?.quote = quote.data
                 self?.viewDelegate?.didLoadQuote()
                 self?.viewDelegate?.showLoading(false)
             case .failure(let error):
