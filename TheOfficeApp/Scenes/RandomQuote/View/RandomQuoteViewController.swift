@@ -26,6 +26,9 @@ class RandomQuoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         vm.viewDelegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         vm.loadRandomQuote()
     }
     

@@ -21,13 +21,13 @@ class RandomQuoteViewModelTests: XCTestCase {
     }()
     
     func testErrorResponse() {
+        serviceMock.willShowError = true
         vm.loadRandomQuote()
         
         XCTAssertTrue(delegate.didCallErrorOnLoadingQuote)
     }
     
     func testSuccess() {
-        serviceMock.quoteResult = .success(Quote(_id: "321", content: "I. DECLARE. BANKRUPTCY", character: Character(_id: "321", firstname: "Michael", lastname: "Scott")))
         vm.loadRandomQuote()
         
         XCTAssertTrue(delegate.didCallDidLoadQuote)
@@ -35,15 +35,13 @@ class RandomQuoteViewModelTests: XCTestCase {
     
     func testsContent() {
         XCTAssertEqual(vm.content, "")
-        
-        serviceMock.quoteResult = .success(Quote(_id: "321", content: "I. DECLARE. BANKRUPTCY", character: Character(_id: "321", firstname: "Michael", lastname: "Scott")))
+
         vm.loadRandomQuote()
         
         XCTAssertEqual(vm.content, "I. DECLARE. BANKRUPTCY")
     }
     
     func testsCharacterFullName() {
-        serviceMock.quoteResult = .success(Quote(_id: "321", content: "I. DECLARE. BANKRUPTCY", character: Character(_id: "321", firstname: "Michael", lastname: "Scott")))
         vm.loadRandomQuote()
         
         XCTAssertEqual(vm.characterFullName, "Scott, Michael")

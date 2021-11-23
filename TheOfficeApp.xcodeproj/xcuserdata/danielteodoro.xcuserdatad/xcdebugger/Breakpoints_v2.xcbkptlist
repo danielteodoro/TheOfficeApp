@@ -167,40 +167,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B4F0CE8F-D06D-453C-94E9-17009B4A7C89"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TheOfficeApp/Networking/WebService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "fetchEpisodes(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6FD91E8E-CD5F-44C5-A16B-22C6458131FE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TheOfficeApp/Networking/WebService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "fetchEpisodes(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "6658DB7D-47E1-4E2E-B145-6D241EBADE76"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TheOfficeApp/Scenes/CrewMemberInfo/View/CrewMemberInfoViewController.swift"
@@ -273,6 +241,102 @@
             startingLineNumber = "33"
             endingLineNumber = "33"
             landmarkName = "testSuccess()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A10D7E3C-586C-4111-82B9-D10DC5FDD3E4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheOfficeAppTests/Scenes/EpisodesList/ViewModel/EpisodeListViewModelTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "testErrorResponse()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08A24D2B-A96F-43C3-B2F6-12D93F21BE47"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheOfficeApp/Scenes/EpisodesList/ViewModel/EpisodeListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "loadEpisodes()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "08A24D2B-A96F-43C3-B2F6-12D93F21BE47 - bd10ce80ce3138a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;TheOfficeApp.EpisodeResponse, Swift.Error&gt;) -&gt; () in TheOfficeApp.EpisodeListViewModel.loadEpisodes() -&gt; ()"
+                  moduleName = "TheOfficeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielteodoro/Projects/TheOfficeApp/TheOfficeApp/Scenes/EpisodesList/ViewModel/EpisodeListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "255">
+               </Location>
+               <Location
+                  uuid = "08A24D2B-A96F-43C3-B2F6-12D93F21BE47 - dc135011bb86954c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 (TheOfficeApp.Episode) -&gt; TheOfficeApp.EpisodeViewModel in closure #1 (Swift.Result&lt;TheOfficeApp.EpisodeResponse, Swift.Error&gt;) -&gt; () in TheOfficeApp.EpisodeListViewModel.loadEpisodes() -&gt; ()"
+                  moduleName = "TheOfficeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielteodoro/Projects/TheOfficeApp/TheOfficeApp/Scenes/EpisodesList/ViewModel/EpisodeListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "47">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D584AB96-4995-469F-915A-4424CB95A8C2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheOfficeApp/Scenes/EpisodesList/ViewModel/EpisodeListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "loadEpisodes()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A65E10A4-5E2F-439F-ADE8-88DB356C8187"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheOfficeApp/Scenes/EpisodesList/ViewModel/EpisodeListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "loadEpisodes()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
