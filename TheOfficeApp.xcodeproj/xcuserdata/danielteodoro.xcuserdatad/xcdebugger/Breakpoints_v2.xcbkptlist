@@ -318,8 +318,8 @@
             filePath = "TheOfficeApp/Scenes/RandomQuote/View/RandomQuoteSwiftUIView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "fetch()"
             landmarkType = "7">
          </BreakpointContent>

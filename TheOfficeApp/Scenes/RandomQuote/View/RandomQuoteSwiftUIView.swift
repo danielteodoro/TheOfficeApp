@@ -11,7 +11,10 @@ struct RandomQuoteSwiftUIView: View {
     @ObservedObject var viewModel: RandomQuoteViewModel
     
     var body: some View {
-        VStack (alignment: .leading, spacing: 16) {
+        VStack (alignment: .center, spacing: 16) {
+            Spacer().frame(height: 16)
+            Text("Random Quote").font(.title)
+            Spacer().frame(height: 32)
             Text(viewModel.content ?? "").onAppear(perform: fetch)
                 .padding(16)
                 .font(.system(size: 24, weight: .regular, design: .default))
@@ -21,6 +24,7 @@ struct RandomQuoteSwiftUIView: View {
                     .font(.system(size: 16, weight: .medium, design: .default))
                 Spacer()
             }
+            Spacer()
         }.onAppear(perform: fetch)
     }
     
