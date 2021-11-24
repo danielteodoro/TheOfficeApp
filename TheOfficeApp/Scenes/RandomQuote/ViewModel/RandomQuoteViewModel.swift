@@ -17,7 +17,7 @@ protocol RandomQuoteViewDelegate {
     func showLoading(_ show: Bool)
 }
 
-class RandomQuoteViewModel {
+public class RandomQuoteViewModel: ObservableObject {
     
     var coordinatorDelegate: RandomQuoteCoordinatorDelegate?
     var viewDelegate: RandomQuoteViewDelegate?
@@ -26,14 +26,18 @@ class RandomQuoteViewModel {
     
     private var quote: Quote?
     
-    var content: String {
-        return  quote?.content ?? ""
+    var content: String? {
+        willSet {
+            objectWillChange.send()
+        }
     }
     
-    var characterFullName: String {
-        return  String("\(self.quote!.character.lastname), \(self.quote!.character.firstname)")
+    var characterFullName: String? {
+        willSet {
+            objectWillChange.send()
+        }
     }
-    
+
     init(service: WebServicing = WebService()) {
         self.service = service
     }
@@ -41,17 +45,25 @@ class RandomQuoteViewModel {
     func loadRandomQuote() {
         viewDelegate?.showLoading(true)
         service.fetchRandomQuote() { [weak self] result in
-            switch result {
-            case .success(let quote):
-                self?.quote = quote
-                self?.viewDelegate?.didLoadQuote()
-                self?.viewDelegate?.showLoading(false)
-            case .failure(let error):
-                self?.viewDelegate?.errorOnLoadingQuote(error: error)
-                self?.viewDelegate?.showLoading(false)
-                break
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let quote):
+                    self?.quote = quote
+                    //                self?.viewDelegate?.didLoadQuote()
+                    self?.setupContents()
+                    self?.viewDelegate?.showLoading(false)
+                case .failure(let error):
+                    self?.viewDelegate?.errorOnLoadingQuote(error: error)
+                    self?.viewDelegate?.showLoading(false)
+                    break
+                }
             }
         }
+    }
+    
+    func setupContents() {
+        self.content = quote?.content ?? ""
+        self.characterFullName = String("\(self.quote!.character.lastname), \(self.quote!.character.firstname)")
     }
     
     func close() {
