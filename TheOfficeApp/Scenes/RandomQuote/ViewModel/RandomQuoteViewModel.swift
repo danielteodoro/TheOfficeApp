@@ -14,7 +14,7 @@ protocol RandomQuoteCoordinatorDelegate {
 protocol RandomQuoteViewDelegate {
     func didLoadQuote()
     func errorOnLoadingQuote(error: Error)
-    func showLoading(_ show: Bool)
+    mutating func showLoading(_ show: Bool)
 }
 
 public class RandomQuoteViewModel: ObservableObject {
@@ -37,24 +37,29 @@ public class RandomQuoteViewModel: ObservableObject {
             objectWillChange.send()
         }
     }
+    
+    var isLoading: Bool = false {
+        willSet{
+            objectWillChange.send()
+        }
+    }
 
     init(service: WebServicing = WebService()) {
         self.service = service
     }
     
     func loadRandomQuote() {
-        viewDelegate?.showLoading(true)
+        isLoading = true
         service.fetchRandomQuote() { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let quote):
                     self?.quote = quote
-                    //                self?.viewDelegate?.didLoadQuote()
                     self?.setupContents()
-                    self?.viewDelegate?.showLoading(false)
+                    self?.isLoading = false
                 case .failure(let error):
                     self?.viewDelegate?.errorOnLoadingQuote(error: error)
-                    self?.viewDelegate?.showLoading(false)
+                    self?.isLoading = false
                     break
                 }
             }
