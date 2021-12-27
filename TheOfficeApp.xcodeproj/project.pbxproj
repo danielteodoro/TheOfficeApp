@@ -45,6 +45,8 @@
 		BF47F5B325704C87000FC71A /* DateFormatterHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF47F5B225704C87000FC71A /* DateFormatterHelperTests.swift */; };
 		BF8C16FC266C5FA6008B3188 /* NSObjectHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8C16FB266C5FA6008B3188 /* NSObjectHelper.swift */; };
 		BF8C1701266C67BA008B3188 /* UIViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8C1700266C67BA008B3188 /* UIViewControllerHelper.swift */; };
+		BF92E37B2778D03D00B5EC75 /* SpacingValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF92E37A2778D03D00B5EC75 /* SpacingValues.swift */; };
+		BF92E37D2778DFB500B5EC75 /* LoadingSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF92E37C2778DFB500B5EC75 /* LoadingSwiftUIView.swift */; };
 		BFAD6E89274DA2640091D733 /* RandomQuoteSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD6E88274DA2640091D733 /* RandomQuoteSwiftUIView.swift */; };
 		BFCF965525856CAD00116F77 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCF965425856CAD00116F77 /* ApplicationCoordinator.swift */; };
 		BFCF96842585882700116F77 /* EpisodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCF96822585882700116F77 /* EpisodeListViewController.swift */; };
@@ -114,6 +116,8 @@
 		BF47F5B225704C87000FC71A /* DateFormatterHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterHelperTests.swift; sourceTree = "<group>"; };
 		BF8C16FB266C5FA6008B3188 /* NSObjectHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectHelper.swift; sourceTree = "<group>"; };
 		BF8C1700266C67BA008B3188 /* UIViewControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerHelper.swift; sourceTree = "<group>"; };
+		BF92E37A2778D03D00B5EC75 /* SpacingValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingValues.swift; sourceTree = "<group>"; };
+		BF92E37C2778DFB500B5EC75 /* LoadingSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingSwiftUIView.swift; sourceTree = "<group>"; };
 		BFAD6E88274DA2640091D733 /* RandomQuoteSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuoteSwiftUIView.swift; sourceTree = "<group>"; };
 		BFCF965425856CAD00116F77 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		BFCF96822585882700116F77 /* EpisodeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListViewController.swift; sourceTree = "<group>"; };
@@ -286,6 +290,8 @@
 				BF8C16FB266C5FA6008B3188 /* NSObjectHelper.swift */,
 				BF8C1700266C67BA008B3188 /* UIViewControllerHelper.swift */,
 				BF41237A2675627800AB6AEF /* LoadingView.swift */,
+				BF92E37A2778D03D00B5EC75 /* SpacingValues.swift */,
+				BF92E37C2778DFB500B5EC75 /* LoadingSwiftUIView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -623,11 +629,13 @@
 				BF071709256C3B1D00A2472F /* Endpoints.swift in Sources */,
 				BF1F2E572591862E0045C006 /* CrewMemberInfoViewModel.swift in Sources */,
 				BF071741256DEE6100A2472F /* DateFormatterHelper.swift in Sources */,
+				BF92E37B2778D03D00B5EC75 /* SpacingValues.swift in Sources */,
 				BF071722256C800800A2472F /* EpisodeListViewModel.swift in Sources */,
 				BF26A5AD257FC50C00F23B02 /* OfficeRouter.swift in Sources */,
 				BF8C1701266C67BA008B3188 /* UIViewControllerHelper.swift in Sources */,
 				BF1F2E712592BB4F0045C006 /* Quote.swift in Sources */,
 				BFAD6E89274DA2640091D733 /* RandomQuoteSwiftUIView.swift in Sources */,
+				BF92E37D2778DFB500B5EC75 /* LoadingSwiftUIView.swift in Sources */,
 				BF26A5D7257FDC4800F23B02 /* EpisodeTableViewCell.swift in Sources */,
 				BF41237B2675627800AB6AEF /* LoadingView.swift in Sources */,
 				BF26A5A4257FC45D00F23B02 /* EpisodeDetailViewController.swift in Sources */,
