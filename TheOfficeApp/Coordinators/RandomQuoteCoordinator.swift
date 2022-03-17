@@ -22,7 +22,6 @@ class RandomQuoteCoordinator: Coordinator {
     func start() {
         let viewModel = RandomQuoteViewModel()
         let randomQuoteView: RandomQuoteSwiftUIView = RandomQuoteSwiftUIView(viewModel: viewModel)
-        randomQuoteView.viewModel.viewDelegate = randomQuoteView
         
         presenter.present(UIHostingController(rootView: randomQuoteView), animated: true)
         

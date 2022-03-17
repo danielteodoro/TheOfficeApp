@@ -7,35 +7,55 @@
 
 import UIKit
 
-protocol EpisodeListViewControllerDelegate {
-    func didSelectEpisode(episodeVM: EpisodeViewModel)
-    func openRandomQuote()
+protocol EpisodeListViewDelegate: AnyObject {
+    func didLoadEpisodes()
+    func errorOnLoadingEpisodes(error: Error)
+    func showLoading(_ show: Bool)
 }
 
-class EpisodeListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+final class EpisodeListViewController: UIViewController {
     
-    public var delegate: EpisodeListViewControllerDelegate?
+    public var delegate: EpisodeListViewModelDelegate?
+    private var vm: EpisodeListViewModelDelegate
     
-    let vm = EpisodeListViewModel()
+    lazy var episodeListTableView: UITableView = {
+        let tableView = UITableView(frame: .zero)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.dataSource = self
+        tableView.delegate = self
+        let episodeCellNib = UINib(nibName: EpisodeTableViewCell.className, bundle: nil)
+        tableView.register(episodeCellNib, forCellReuseIdentifier: EpisodeTableViewCell.className)
+        return tableView
+    }()
     
-    @IBOutlet weak var episodeListTableView: UITableView! {
-        didSet {
-            episodeListTableView?.dataSource = self
-            episodeListTableView?.delegate = self
-            
-            let episodeCellNib = UINib(nibName: EpisodeTableViewCell.className, bundle: nil)
-            episodeListTableView.register(episodeCellNib, forCellReuseIdentifier: EpisodeTableViewCell.className)
-        }
+    init(viewModel: EpisodeListViewModelDelegate) {
+        self.vm = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        vm.viewDelegate = self
         vm.loadEpisodes()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        self.setRandomQuoteButton()
+    override func viewWillAppear(_ animated: Bool) {
+        setRandomQuoteButton()
+        configureViews()
+    }
+    
+    func configureViews() {
+        view.backgroundColor = .white
+        view.addSubview(episodeListTableView)
+        NSLayoutConstraint.activate([
+            episodeListTableView.topAnchor.constraint(equalTo: view.topAnchor),
+            episodeListTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            episodeListTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            episodeListTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
     }
     
     func setRandomQuoteButton() {
@@ -46,28 +66,29 @@ class EpisodeListViewController: UIViewController, UITableViewDelegate, UITableV
     @objc func openRandomQuote() {
         self.delegate?.openRandomQuote()
     }
-    
-    // MARK: - Table view data source
-    
+}
+
+// MARK: - Table view data source
+extension EpisodeListViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.vm.episodesVM.count
+        return vm.episodesCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: EpisodeTableViewCell.className) as! EpisodeTableViewCell
         
         
-        cell.presentData(episodeVM: vm.episodesVM[indexPath.row])
+        cell.presentData(episodeVM: vm.episode(for: indexPath))
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.delegate?.didSelectEpisode(episodeVM: vm.episodesVM[indexPath.row])
+        self.delegate?.didSelectEpisode(at: indexPath)
         
         self.episodeListTableView.deselectRow(at: indexPath, animated: false)
     }

@@ -7,20 +7,24 @@
 
 import Foundation
 
-protocol EpisodeListViewDelegate {
-    func didLoadEpisodes()
-    func errorOnLoadingEpisodes(error: Error)
-    func showLoading(_ show: Bool)
+protocol EpisodeListViewModelDelegate: AnyObject {
+    var episodesCount: Int { get }
+    func episode(for indexPath: IndexPath) -> EpisodeViewModel
+    func loadEpisodes()
+    func didSelectEpisode(at indexPath: IndexPath)
+    func openRandomQuote()
 }
 
-class EpisodeListViewModel {
+final class EpisodeListViewModel {
     
     var service: WebServicing
+    weak var viewDelegate: EpisodeListViewDelegate?
+    weak var coordinatorDelegate: EpisodeListCoordinatorDelegate?
     
-    var episodesVM = [EpisodeViewModel]()
-    var viewDelegate: EpisodeListViewDelegate?
+    private var episodesVM = [EpisodeViewModel]()
     
-    init(service: WebServicing = WebService()) {
+    init(coordinatorDelegate: EpisodeListCoordinatorDelegate, service: WebServicing = WebService()) {
+        self.coordinatorDelegate = coordinatorDelegate
         self.service = service
     }
     
@@ -37,5 +41,25 @@ class EpisodeListViewModel {
                 self?.viewDelegate?.showLoading(false)
             }
         }
+    }
+}
+
+extension EpisodeListViewModel: EpisodeListViewModelDelegate {
+    var episodesCount: Int {
+        get {
+            return self.episodesVM.count
+        }
+    }
+    
+    func episode(for indexPath: IndexPath) -> EpisodeViewModel {
+        return episodesVM[indexPath.row]
+    }
+    
+    func didSelectEpisode(at indexPath: IndexPath) {
+        coordinatorDelegate?.perform(.openEpisode(episode(for: indexPath)))
+    }
+    
+    func openRandomQuote() {
+        coordinatorDelegate?.perform(.randomQuote)
     }
 }

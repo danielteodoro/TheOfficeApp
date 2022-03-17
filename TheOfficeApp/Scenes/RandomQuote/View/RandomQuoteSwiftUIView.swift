@@ -44,21 +44,6 @@ struct RandomQuoteSwiftUIView: View {
 struct RandomQuoteSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         let view = RandomQuoteSwiftUIView(viewModel: RandomQuoteViewModel())
-        view.viewModel.viewDelegate = view
         return view
-    }
-}
-
-extension RandomQuoteSwiftUIView: RandomQuoteViewDelegate {
-    func didLoadQuote() {
-        print("didLoadQuote")
-    }
-    
-    func errorOnLoadingQuote(error: Error) {
-        print("error")
-    }
-    
-    func showLoading(_ show: Bool) {
-        print("test loading")
     }
 }
