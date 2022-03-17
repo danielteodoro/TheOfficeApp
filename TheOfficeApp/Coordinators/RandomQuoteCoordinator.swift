@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import SwiftUI
 
 class RandomQuoteCoordinator: Coordinator {
     
     private let presenter: Router
     
-    var view: RandomQuoteViewController?
+    var view: RandomQuoteSwiftUIView?
     var viewModel: RandomQuoteViewModel?
     
     init(presenter: Router){
@@ -20,13 +21,14 @@ class RandomQuoteCoordinator: Coordinator {
     
     func start() {
         let viewModel = RandomQuoteViewModel()
-        let randomQuoteViewController = RandomQuoteViewController(viewModel: viewModel)
-        presenter.present(randomQuoteViewController, animated: true)
+        let randomQuoteView: RandomQuoteSwiftUIView = RandomQuoteSwiftUIView(viewModel: viewModel)
+        
+        presenter.present(UIHostingController(rootView: randomQuoteView), animated: true)
         
         viewModel.coordinatorDelegate = self
         
         self.viewModel = viewModel
-        self.view = randomQuoteViewController
+        self.view = randomQuoteView
     }
     
     func stop() {
