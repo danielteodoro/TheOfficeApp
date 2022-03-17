@@ -176,7 +176,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
             endingLineNumber = "23"
-            landmarkName = "fetchEpisodes(completion:)"
+            landmarkName = "fetch(from:with:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -192,7 +192,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
             endingLineNumber = "20"
-            landmarkName = "fetchEpisodes(completion:)"
+            landmarkName = "fetch(from:with:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
