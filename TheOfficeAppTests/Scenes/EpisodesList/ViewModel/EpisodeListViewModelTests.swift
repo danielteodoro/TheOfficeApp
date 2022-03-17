@@ -13,16 +13,36 @@ enum ServiceError: Error {
 }
 
 class WebServiceMock: WebServicing {
+
+    var willShowError = false
     
-    var result: Result<[Episode], Error> = .failure(ServiceError.generic)
-    var quoteResult: Result<Quote, Error> = .failure(ServiceError.generic)
-    
-    func fetchEpisodes(completion: @escaping (Result<[Episode], Error>) -> Void) {
-        completion(result)
-    }
-    
-    func fetchRandomQuote(completion: @escaping (Result<Quote, Error>) -> Void) {
-        completion(quoteResult)
+    func fetch<T: Decodable>(from endpoint: Endpoints, with class: T.Type, completion:  @escaping (Result<T, Error>) -> Void) {
+        if willShowError {
+            completion(.failure(ServiceError.generic))
+        } else {
+            switch endpoint {
+            case .episodes:
+                completion(.success(EpisodeResponse(data: [
+                    Episode(_id: "123",
+                            title: "Pilot",
+                            description: "Michael makes a joke.",
+                            airDate: "test date",
+                            director: CrewMember(_id: "321",
+                                                 name: "Greg Daniels",
+                                                 role: "Director"),
+                            writer: CrewMember(_id: "321",
+                                               name: "Greg Daniels",
+                                               role: "Director"))
+                ]) as! T))
+            case .randomQuote:
+                completion(.success(QuoteResponse(data:
+                                                    Quote(_id: "321",
+                                                          content: "I. DECLARE. BANKRUPTCY",
+                                                          character: Character(_id: "321",
+                                                                               firstname: "Michael",
+                                                                               lastname: "Scott"))) as! T))
+            }
+        }
     }
 }
 
@@ -56,13 +76,13 @@ class EpisodeListViewModelTests: XCTestCase {
     }()
     
     func testErrorResponse() {
+        serviceMock.willShowError = true
         vm.loadEpisodes()
         
         XCTAssertEqual(delegate.errorOnLoadingEpisodesCount, 1)
     }
     
     func testSuccess() {
-        serviceMock.result = .success([Episode(_id: "123", title: "Pilot", description: "Michael makes a joke.", airDate: "test date", director: CrewMember(_id: "321", name: "Greg Daniels", role: "Director"), writer: CrewMember(_id: "321", name: "Greg Daniels", role: "Director"))])
         vm.loadEpisodes()
         
         XCTAssertEqual(delegate.didLoadEpisodesCount, 1)

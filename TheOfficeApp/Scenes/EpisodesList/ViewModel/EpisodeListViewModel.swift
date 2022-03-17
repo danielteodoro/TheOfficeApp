@@ -30,17 +30,17 @@ final class EpisodeListViewModel {
     
     func loadEpisodes() {
         self.viewDelegate?.showLoading(true)
-        service.fetchEpisodes() { [weak self] result in
+        service.fetch(from: Endpoints.episodes, with: EpisodeResponse.self, completion: { [weak self] result in
             switch result {
-            case .success(let episodes):
-                self?.episodesVM = episodes.map(EpisodeViewModel.init)
+            case .success(let episode):
+                self?.episodesVM = episode.data.map(EpisodeViewModel.init)
                 self?.viewDelegate?.didLoadEpisodes()
                 self?.viewDelegate?.showLoading(false)
             case .failure(let error):
                 self?.viewDelegate?.errorOnLoadingEpisodes(error: error)
                 self?.viewDelegate?.showLoading(false)
             }
-        }
+        })
     }
 }
 
