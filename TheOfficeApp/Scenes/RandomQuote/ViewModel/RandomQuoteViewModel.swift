@@ -50,7 +50,7 @@ public class RandomQuoteViewModel: ObservableObject {
     
     func loadRandomQuote() {
         isLoading = true
-        service.fetchRandomQuote() { [weak self] result in
+        service.fetch(from: .randomQuote, with: Quote.self) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let quote):
