@@ -21,7 +21,7 @@ class EpisodeViewModelTests: XCTestCase {
     }
     
     func testAirDate() {
-        XCTAssertEqual(vm.airDate, "Mar 29, 2005")
+        XCTAssertEqual(vm.airDate, "mar. 29, 2005")
     }
     
     func testDirectorName() {
