@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct RandomQuoteSwiftUIView: View {
+    
+    @Environment(\.dismiss) private var dismiss
+    
     @ObservedObject var viewModel: RandomQuoteViewModel
     
     var body: some View {
@@ -33,6 +36,10 @@ struct RandomQuoteSwiftUIView: View {
             if viewModel.isLoading {
                 LoadingSwiftUIView()
             }
+        }
+        .alert(viewModel.error?.localizedDescription ?? "", isPresented: $viewModel.displayError) {
+            Button("try again") { fetch() }
+            Button("cancel", role: .cancel) { dismiss() }
         }
     }
     

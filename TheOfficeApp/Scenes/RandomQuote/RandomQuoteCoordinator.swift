@@ -8,6 +8,10 @@
 import UIKit
 import SwiftUI
 
+protocol RandomQuoteCoordinatorDelegate {
+    func closeRandomQuote()
+}
+
 class RandomQuoteCoordinator: Coordinator {
     
     private let presenter: Router

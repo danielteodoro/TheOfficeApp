@@ -15,8 +15,7 @@ protocol EpisodeListViewDelegate: AnyObject {
 
 final class EpisodeListViewController: UIViewController {
     
-    public var delegate: EpisodeListViewModelDelegate?
-    private var vm: EpisodeListViewModelDelegate
+    private var vm: EpisodeListViewModelDelegate?
     
     lazy var episodeListTableView: UITableView = {
         let tableView = UITableView(frame: .zero)
@@ -39,7 +38,7 @@ final class EpisodeListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        vm.loadEpisodes()
+        vm?.loadEpisodes()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,6 +47,7 @@ final class EpisodeListViewController: UIViewController {
     }
     
     func configureViews() {
+        title = "Episodes List"
         view.backgroundColor = .white
         view.addSubview(episodeListTableView)
         NSLayoutConstraint.activate([
@@ -64,7 +64,7 @@ final class EpisodeListViewController: UIViewController {
     }
     
     @objc func openRandomQuote() {
-        self.delegate?.openRandomQuote()
+        self.vm?.openRandomQuote()
     }
 }
 
@@ -75,24 +75,21 @@ extension EpisodeListViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return vm.episodesCount
+        return vm?.episodesCount ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let episode = vm?.episode(for: indexPath) else { return UITableViewCell() }
         let cell = tableView.dequeueReusableCell(withIdentifier: EpisodeTableViewCell.className) as! EpisodeTableViewCell
-        
-        
-        cell.presentData(episodeVM: vm.episode(for: indexPath))
-        
+        cell.presentData(episodeVM: episode)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.delegate?.didSelectEpisode(at: indexPath)
+        self.vm?.didSelectEpisode(at: indexPath)
         
         self.episodeListTableView.deselectRow(at: indexPath, animated: false)
     }
-    
 }
 
 extension EpisodeListViewController: EpisodeListViewDelegate {
@@ -103,7 +100,7 @@ extension EpisodeListViewController: EpisodeListViewDelegate {
     
     func errorOnLoadingEpisodes(error: Error) {
         displayError(error, retryHandler: {_ in
-            self.vm.loadEpisodes()
+            self.vm?.loadEpisodes()
         })
     }
 }

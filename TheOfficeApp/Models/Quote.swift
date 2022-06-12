@@ -12,7 +12,12 @@ struct QuoteResponse: Decodable {
 }
 
 struct Quote: Decodable {
-    let _id: String
+    let id: String
     let content: String
     let character: Character
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "_id"
+        case content, character
+    }
 }

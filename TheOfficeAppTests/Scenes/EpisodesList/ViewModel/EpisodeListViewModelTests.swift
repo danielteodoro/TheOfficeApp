@@ -8,17 +8,13 @@
 import XCTest
 @testable import TheOfficeApp
 
-enum ServiceError: Error {
-    case generic
-}
-
 class WebServiceMock: WebServicing {
-
+    
     var willShowError = false
     
-    func fetch<T: Decodable>(from endpoint: Endpoints, with class: T.Type, completion:  @escaping (Result<T, Error>) -> Void) {
+    func fetch<T>(from endpoint: TheOfficeApp.Endpoints, with class: T.Type, completion: @escaping (Result<T, TheOfficeApp.ServiceError>) -> Void) where T : Decodable {
         if willShowError {
-            completion(.failure(ServiceError.generic))
+            completion(.failure(TheOfficeApp.ServiceError.emptyData))
         } else {
             switch endpoint {
             case .episodes:
@@ -36,9 +32,9 @@ class WebServiceMock: WebServicing {
                 ]) as! T))
             case .randomQuote:
                 completion(.success(QuoteResponse(data:
-                                                    Quote(_id: "321",
+                                                    Quote(id: "321",
                                                           content: "I. DECLARE. BANKRUPTCY",
-                                                          character: Character(_id: "321",
+                                                          character: Character(id: "321",
                                                                                firstname: "Michael",
                                                                                lastname: "Scott"))) as! T))
             }
@@ -65,12 +61,21 @@ class EpisodeListViewModelDelegateMock: EpisodeListViewDelegate{
     }
 }
 
+class CoordinatorMock: EpisodeListCoordinatorDelegate {
+    var actionToBePerformed: EpisodeListCoordinatorAction?
+    
+    func perform(_ action: TheOfficeApp.EpisodeListCoordinatorAction) {
+        actionToBePerformed = action
+    }
+}
+
 class EpisodeListViewModelTests: XCTestCase {
     
     private let serviceMock = WebServiceMock()
     private let delegate = EpisodeListViewModelDelegateMock()
+    private let coordinator = CoordinatorMock()
     lazy var vm: EpisodeListViewModel = {
-        let vm = EpisodeListViewModel(service: serviceMock)
+        let vm = EpisodeListViewModel(coordinatorDelegate: coordinator, service: serviceMock)
         vm.viewDelegate = delegate
         return vm
     }()

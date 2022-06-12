@@ -7,20 +7,9 @@
 
 import Foundation
 
-protocol RandomQuoteCoordinatorDelegate {
-    func closeRandomQuote()
-}
-
-protocol RandomQuoteViewDelegate {
-    func didLoadQuote()
-    func errorOnLoadingQuote(error: Error)
-    mutating func showLoading(_ show: Bool)
-}
-
 public class RandomQuoteViewModel: ObservableObject {
     
     var coordinatorDelegate: RandomQuoteCoordinatorDelegate?
-    var viewDelegate: RandomQuoteViewDelegate?
     
     var service: WebServicing
     
@@ -39,10 +28,18 @@ public class RandomQuoteViewModel: ObservableObject {
     }
     
     var isLoading: Bool = false {
-        willSet{
+        willSet {
             objectWillChange.send()
         }
     }
+    
+    var displayError: Bool = false {
+        willSet {
+            objectWillChange.send()
+        }
+    }
+    
+    var error: Error?
 
     init(service: WebServicing = WebService()) {
         self.service = service
@@ -50,16 +47,17 @@ public class RandomQuoteViewModel: ObservableObject {
     
     func loadRandomQuote() {
         isLoading = true
-        service.fetch(from: .randomQuote, with: Quote.self) { [weak self] result in
+        service.fetch(from: .randomQuote, with: QuoteResponse.self) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
-                case .success(let quote):
-                    self?.quote = quote
+                case .success(let quoteResponse):
+                    self?.quote = quoteResponse.data
                     self?.setupContents()
                     self?.isLoading = false
                 case .failure(let error):
-                    self?.viewDelegate?.errorOnLoadingQuote(error: error)
                     self?.isLoading = false
+                    self?.displayError = true
+                    self?.error = error
                     break
                 }
             }

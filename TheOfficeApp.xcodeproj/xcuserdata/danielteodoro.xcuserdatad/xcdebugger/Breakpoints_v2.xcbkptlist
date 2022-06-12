@@ -174,8 +174,8 @@
             filePath = "TheOfficeApp/Networking/WebService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "fetch(from:with:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -192,8 +192,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
             endingLineNumber = "20"
-            landmarkName = "fetch(from:with:completion:)"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -226,6 +226,38 @@
             endingLineNumber = "60"
             landmarkName = "pop(animated:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "55C9AF7E-3FC9-4293-9754-4514D4198A23 - 807b8728a5a36f81"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheOfficeApp.OfficeRouter.pop(animated: Swift.Bool) -&gt; ()"
+                  moduleName = "TheOfficeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielteodoro/Projetos/TheOfficeApp/TheOfficeApp/Router/OfficeRouter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "55C9AF7E-3FC9-4293-9754-4514D4198A23 - 807b8728a5a36f81"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheOfficeApp.OfficeRouter.pop(animated: Swift.Bool) -&gt; ()"
+                  moduleName = "TheOfficeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielteodoro/Projetos/TheOfficeApp/TheOfficeApp/Router/OfficeRouter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -286,8 +318,8 @@
             filePath = "TheOfficeApp/Scenes/RandomQuote/View/RandomQuoteSwiftUIView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "fetch()"
             landmarkType = "7">
          </BreakpointContent>
@@ -295,47 +327,327 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F8C0C945-9F45-4843-8974-85F7E9213488"
+            uuid = "A1F085F5-2E6A-4FCC-BEF9-4D82A550D84E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheOfficeApp/Scenes/EpisodesList/View/EpisodeListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0AF3114-F021-4B43-BFA4-DEE1BA79404F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheOfficeApp/Scenes/EpisodesList/ViewModel/EpisodeListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "didSelectEpisode(at:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "612B47FE-C255-4963-A92D-5BB50C6ABD01"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheOfficeApp/Scenes/RandomQuote/ViewModel/RandomQuoteViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "loadRandomQuote()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13DA56C2-B5BD-48F7-B817-9E4E40A4E88B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TheOfficeApp/Scenes/RandomQuote/View/RandomQuoteSwiftUIView.swift"
+            filePath = "TheOfficeApp/Scenes/EpisodesList/View/EpisodeListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "errorOnLoadingEpisodes(error:)"
+            landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "F8C0C945-9F45-4843-8974-85F7E9213488 - d1df3904e0beaeee"
+                  uuid = "13DA56C2-B5BD-48F7-B817-9E4E40A4E88B - f54a810d193a44b2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.scaleEffect(_: CoreGraphics.CGFloat, anchor: SwiftUI.UnitPoint) -&gt; some&gt;&gt;.0)&gt;&gt;&gt;)&gt; in TheOfficeApp.RandomQuoteSwiftUIView.body.getter : some"
+                  symbolName = "TheOfficeApp.EpisodeListViewController.errorOnLoadingEpisodes(error: Swift.Error) -&gt; ()"
                   moduleName = "TheOfficeApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danielteodoro/Projetos/TheOfficeApp/TheOfficeApp/Scenes/RandomQuote/View/RandomQuoteSwiftUIView.swift"
+                  urlString = "file:///Users/danielteodoro/Projetos/TheOfficeApp/TheOfficeApp/Scenes/EpisodesList/View/EpisodeListViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "1092">
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "64">
                </Location>
                <Location
-                  uuid = "F8C0C945-9F45-4843-8974-85F7E9213488 - 7e38d103a258d524"
+                  uuid = "13DA56C2-B5BD-48F7-B817-9E4E40A4E88B - 7aff2f970d3d1e39"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.scaleEffect(_: CoreGraphics.CGFloat, anchor: SwiftUI.UnitPoint) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.ignoresSafeArea(_: SwiftUI.SafeAreaRegions, edges: SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.scaleEffect(_: CoreGraphics.CGFloat, anchor: SwiftUI.UnitPoint) -&gt; some&gt;&gt;.0)&gt;&gt;&gt;)&gt; in TheOfficeApp.RandomQuoteSwiftUIView.body.getter : some"
+                  symbolName = "closure #1 (__C.UIAlertAction) -&gt; () in TheOfficeApp.EpisodeListViewController.errorOnLoadingEpisodes(error: Swift.Error) -&gt; ()"
                   moduleName = "TheOfficeApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danielteodoro/Projetos/TheOfficeApp/TheOfficeApp/Scenes/RandomQuote/View/RandomQuoteSwiftUIView.swift"
+                  urlString = "file:///Users/danielteodoro/Projetos/TheOfficeApp/TheOfficeApp/Scenes/EpisodesList/View/EpisodeListViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "388">
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AA978ABF-E7C4-4429-8130-59F3E292FBDD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheOfficeApp/Scenes/RandomQuote/ViewModel/RandomQuoteViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "loadRandomQuote()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F3A4CF9B-9B17-481D-8B29-E28A14470E8F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheOfficeAppTests/Scenes/RandomQuote/ViewModel/RandomQuoteViewModelTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "testErrorResponse()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F3A4CF9B-9B17-481D-8B29-E28A14470E8F - 1177427d241f5e2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheOfficeAppTests.RandomQuoteViewModelTests.testErrorResponse() -&gt; ()"
+                  moduleName = "TheOfficeAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielteodoro/Projetos/TheOfficeApp/TheOfficeAppTests/Scenes/RandomQuote/ViewModel/RandomQuoteViewModelTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "284">
+               </Location>
+               <Location
+                  uuid = "F3A4CF9B-9B17-481D-8B29-E28A14470E8F - 1177427d241f5e2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheOfficeAppTests.RandomQuoteViewModelTests.testErrorResponse() -&gt; ()"
+                  moduleName = "TheOfficeAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielteodoro/Projetos/TheOfficeApp/TheOfficeAppTests/Scenes/RandomQuote/ViewModel/RandomQuoteViewModelTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "368">
+               </Location>
+               <Location
+                  uuid = "F3A4CF9B-9B17-481D-8B29-E28A14470E8F - 1177427d241f5c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheOfficeAppTests.RandomQuoteViewModelTests.testErrorResponse() -&gt; ()"
+                  moduleName = "TheOfficeAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielteodoro/Projetos/TheOfficeApp/TheOfficeAppTests/Scenes/RandomQuote/ViewModel/RandomQuoteViewModelTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "F3A4CF9B-9B17-481D-8B29-E28A14470E8F - 1177427d241f5c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheOfficeAppTests.RandomQuoteViewModelTests.testErrorResponse() -&gt; ()"
+                  moduleName = "TheOfficeAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielteodoro/Projetos/TheOfficeApp/TheOfficeAppTests/Scenes/RandomQuote/ViewModel/RandomQuoteViewModelTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "316">
+               </Location>
+               <Location
+                  uuid = "F3A4CF9B-9B17-481D-8B29-E28A14470E8F - 1177427d241f5ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheOfficeAppTests.RandomQuoteViewModelTests.testErrorResponse() -&gt; ()"
+                  moduleName = "TheOfficeAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielteodoro/Projetos/TheOfficeApp/TheOfficeAppTests/Scenes/RandomQuote/ViewModel/RandomQuoteViewModelTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "340">
+               </Location>
+               <Location
+                  uuid = "F3A4CF9B-9B17-481D-8B29-E28A14470E8F - 1164c0422d1e8da"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in TheOfficeAppTests.RandomQuoteViewModelTests.testErrorResponse() -&gt; ()"
+                  moduleName = "TheOfficeAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielteodoro/Projetos/TheOfficeApp/TheOfficeAppTests/Scenes/RandomQuote/ViewModel/RandomQuoteViewModelTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "F3A4CF9B-9B17-481D-8B29-E28A14470E8F - 1164c0422d1e856"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in TheOfficeAppTests.RandomQuoteViewModelTests.testErrorResponse() -&gt; ()"
+                  moduleName = "TheOfficeAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielteodoro/Projetos/TheOfficeApp/TheOfficeAppTests/Scenes/RandomQuote/ViewModel/RandomQuoteViewModelTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "F3A4CF9B-9B17-481D-8B29-E28A14470E8F - 1164c0422d1e875"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in TheOfficeAppTests.RandomQuoteViewModelTests.testErrorResponse() -&gt; ()"
+                  moduleName = "TheOfficeAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielteodoro/Projetos/TheOfficeApp/TheOfficeAppTests/Scenes/RandomQuote/ViewModel/RandomQuoteViewModelTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DC938731-A898-4394-9864-C5ADC3D15747"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TheOfficeAppTests/Scenes/RandomQuote/ViewModel/RandomQuoteViewModelTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "fetch(from:with:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DC938731-A898-4394-9864-C5ADC3D15747 - 2a600aa7a5904562"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheOfficeAppTests.RandomQuoteServiceMock.fetch&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(from: TheOfficeApp.Endpoints, with: &#x3c4;_0_0.Type, completion: (Swift.Result&lt;&#x3c4;_0_0, TheOfficeApp.ServiceError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TheOfficeAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielteodoro/Projetos/TheOfficeApp/TheOfficeAppTests/Scenes/RandomQuote/ViewModel/RandomQuoteViewModelTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "316">
+               </Location>
+               <Location
+                  uuid = "DC938731-A898-4394-9864-C5ADC3D15747 - 2a600aa7a5905a85"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheOfficeAppTests.RandomQuoteServiceMock.fetch&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(from: TheOfficeApp.Endpoints, with: &#x3c4;_0_0.Type, completion: (Swift.Result&lt;&#x3c4;_0_0, TheOfficeApp.ServiceError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TheOfficeAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielteodoro/Projetos/TheOfficeApp/TheOfficeAppTests/Scenes/RandomQuote/ViewModel/RandomQuoteViewModelTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "316">
+               </Location>
+               <Location
+                  uuid = "DC938731-A898-4394-9864-C5ADC3D15747 - 2a600aa7a5904520"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheOfficeAppTests.RandomQuoteServiceMock.fetch&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(from: TheOfficeApp.Endpoints, with: &#x3c4;_0_0.Type, completion: (Swift.Result&lt;&#x3c4;_0_0, TheOfficeApp.ServiceError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TheOfficeAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielteodoro/Projetos/TheOfficeApp/TheOfficeAppTests/Scenes/RandomQuote/ViewModel/RandomQuoteViewModelTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "316">
+               </Location>
+               <Location
+                  uuid = "DC938731-A898-4394-9864-C5ADC3D15747 - 2a600aa7a59045cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TheOfficeAppTests.RandomQuoteServiceMock.fetch&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(from: TheOfficeApp.Endpoints, with: &#x3c4;_0_0.Type, completion: (Swift.Result&lt;&#x3c4;_0_0, TheOfficeApp.ServiceError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TheOfficeAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielteodoro/Projetos/TheOfficeApp/TheOfficeAppTests/Scenes/RandomQuote/ViewModel/RandomQuoteViewModelTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "316">
                </Location>
             </Locations>
          </BreakpointContent>

@@ -28,7 +28,6 @@ class EpisodeListCoordinator: Coordinator {
         let viewModel = EpisodeListViewModel(coordinatorDelegate: self)
         let episodeListViewController = EpisodeListViewController(viewModel: viewModel)
         viewModel.viewDelegate = episodeListViewController
-        episodeListViewController.title = "Episodes List"
         presenter.push(episodeListViewController, animated: true, completion:nil)
         
         self.episodeListViewController = episodeListViewController
